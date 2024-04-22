@@ -47,13 +47,6 @@
 
 <?php wp_footer(); ?>
 
-<?php // 現在使用しているテンプレートファイルを表示
-  if (is_user_logged_in()){ // ログイン中なら以下を表示
-    global $template; // テンプレートファイルのパスを取得
-    $temp_name = basename($template); // パスの最後の名前（ファイル名）を取得
-    echo '現在使用しているテンプレートファイル：'.$temp_name; // ファイル名の表示
-  }
-?>
 
 <!-- スムーズスクロール部分の記述 -->
 <script>
