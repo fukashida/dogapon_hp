@@ -132,8 +132,6 @@
   right: 0;
 }
 
-.drawer--right.drawer-open .drawer-hamburger {
-}
 
 /*!------------------------------------*\
     Hamburger
@@ -179,7 +177,7 @@
   transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
   background-color: #fff;
 }
-.drawer-hamburger-icon{width: 70%;}
+.drawer-hamburger-icon{width: 70%; background: #a0a0a0;}
 .drawer-hamburger-icon:before{width: 130%;}
 .drawer-hamburger-icon:after{width: 100%;}
 
@@ -190,19 +188,12 @@
   content: ' ';
 }
 
-.drawer-hamburger-icon:before{left: -6px;}
+.drawer-hamburger-icon:before{left: -6px; background: #a0a0a0;}
 
 .drawer-hamburger-icon:after {
   top: 10px;
   left: 0px;
-}
-
-.drawer-open .drawer-hamburger-icon {
-}
-
-.drawer-open .drawer-hamburger-icon:before,
-.drawer-open .drawer-hamburger-icon:after {
-
+  background: #a0a0a0;
 }
 
 .drawer-open .drawer-hamburger-icon,

@@ -36,8 +36,7 @@ img {width: 100%; height: auto; vertical-align: bottom;}
 .btnWhite a{display: inline-block; max-width: 300px; border-radius: 50px; background: #fff; padding: 10px 40px; color: #0071b5; text-decoration: none; font-size: 24px;box-shadow: 0px 0px 16px -6px rgba(0,0,0,0.9);}
 .btnWhite a:hover{background: #0071b5; color: #fff; transition: .3s;}
 
-header{}
-header .pc{display: flex; justify-content: space-between; align-items: center;height: 70px; background: rgba(255,255,255,0.9); position: fixed; top: 0; width: 100%; z-index: 10; padding: 0px 0 0 15px;transition: .3s;}
+header .pc{display: flex; justify-content: space-between; align-items: center;height: 70px; background: rgba(255,255,255,0.9); position: fixed; top: 0; width: 100%; z-index: 10; padding: 0px 0 0 15px;transition: .3s; box-shadow: 0 3px 5px rgba(0,0,0,0.16);}
 header h1{width: 210px;}
 header h1 img{display: block;}
 
@@ -316,7 +315,7 @@ body.is-modal{ height: 100vh; overflow: hidden;}
     .sp{display: none!important;}
     .tab-sp{display: none!important;}
     header div.hide {transform: translateY(-100px);}
-    .wrapMV{min-height: 700px; height: 87vh;}
+    .wrapMV{min-height: 700px; height: auto;}
 }
 
 
@@ -456,4 +455,401 @@ body.is-modal{ height: 100vh; overflow: hidden;}
     .btnTop.is_flow a{bottom: 40px;}
     
     .wrapMV{height: 89vh;}
+}
+
+
+
+/*============================
+  お問い合わせフォーム
+================================*/
+
+.contact {
+    padding: 70px 0 100px;
+    margin-top: 80px;
+}
+@media screen and (max-width:540px) {
+    .contact {
+        padding: 50px 0 80px;
+        margin-top: 10px;
+    }
+}
+
+.contact h2 {
+    color: #000;
+    margin-bottom: 80px;
+    font-size: 40px;
+    text-align: center;
+}
+@media screen and (max-width:540px) {
+    .contact h2 {
+        margin-bottom: 60px;
+        font-size: 28px;
+        text-align: center;
+    }
+}
+
+.contact .box {
+    margin: 40px 0 60px;
+    padding: 40px 30px;
+    background: white;
+    border: solid 3px #cccccc;
+}
+
+.contact .box .flex{
+    margin-bottom: 15px;
+    gap: 20px;
+}
+
+.contact .box .flex p:first-child{
+   font-weight: bold;
+   color: #000;
+}
+
+.contact .container{
+	max-width: 930px;
+    width: calc(100% - 80px);
+    margin: auto;
+}
+@media screen and (max-width:540px) {
+    .contact .container{
+        width: calc(100% - 60px);
+    }
+}
+
+#wrapCSL.wrapMV.contact {
+   padding-top: 80px;
+}
+
+@media screen and (max-width:650px) {
+    #wrapCSL.wrapMV.contact {
+        height: 60vh;
+        min-height: auto;
+        padding-top: 0;
+        background: url(../images/counseling/imgMV_sp.png) no-repeat 0%/cover;
+    }
+}
+@media screen and (max-width:380px) {
+    #wrapCSL.wrapMV.contact {
+        height: 45vh;
+    }
+}
+
+.contact-content .flex-item {
+margin-bottom: 30px;
+}
+
+.contact-content label{
+display: block;
+color: #000;
+margin-bottom: 10px;
+}
+
+input[type=text] {
+    width: 50%;
+    font-size: 18px;
+    padding: 17px 24px;
+    border-radius: 5px;
+    border: solid 1px #9F9F9F;
+}
+@media screen and (max-width:800px) {
+    input[type=text] {
+        width: 100%;
+        padding: 17px;
+    }
+}
+
+input[type="datetime-local" i] {  
+    width: 50%;
+    font-size: 18px;
+    padding: 17px 24px;
+    border-radius: 5px;
+    border: solid 1px #9F9F9F;
+}
+@media screen and (max-width:800px) {
+    input[type="datetime-local" i] {  
+        width: 100%;
+        padding: 17px;
+    }
+}
+
+#contact_message{
+width: 100%;
+height: 281px;
+font-size: 18px;
+padding: 17px 24px;
+border-radius: 5px;
+border: solid 1px #9F9F9F;
+font-weight: normal;
+}
+@media screen and (max-width:540px) {
+    #contact_message{
+        padding: 17px;
+    }
+}
+
+#message::placeholder {
+color: #9F9F9F;
+font-weight: normal;
+}
+
+input[type="submit"] {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto 0;
+    width: 100%;
+    height: 66px;
+    font-size: 18px;
+    color: white;
+    text-decoration-line: none;
+    background: #ff1900;
+    border: none;
+    box-shadow: 4px 4px 0 rgb(165, 37, 1);
+}
+
+.contact p.error_msg {
+    font-size: 15px;
+    margin-top: 5px;
+    color: #F50042;
+    position: relative;
+    }
+
+    @media screen and (max-width:540px) {
+    .contact p.error_msg {
+        font-size: 13px;
+    }
+    }
+
+    .contact p.error_msg_5 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #F50042;
+    position: relative;
+    }
+
+    @media screen and (max-width:540px) {
+    .contact p.error_msg_5 {
+        display: block;
+        font-size: 16px;
+        margin: 0 auto 40px;
+        width: 225px;
+    }
+    }
+  
+/*============================
+お問い合わせフォーム確認画面
+================================*/
+  
+    .confirm {
+        padding: 70px 0 120px;
+        font-size: 18px;
+        margin-top: 80px;
+    }
+    @media screen and (max-width:540px) {
+        .confirm {
+            padding: 80px 0;
+            margin-top: 0;
+            font-size: 16px;
+        }
+    }
+
+    .confirm .container{
+        max-width: 930px;
+        width: calc(100% - 80px);
+        margin: auto;
+    }
+    @media screen and (max-width:540px) {
+        .confirm .container{
+            width: calc(100% - 60px);
+        }
+    }
+
+    .confirm h2 {
+        margin-bottom: 80px;
+        font-size: 40px;
+        color: #000;
+        text-align: center;
+    }
+    @media screen and (max-width:540px) {
+        .confirm h2 {
+            margin-bottom: 60px;
+            font-size: 28px;
+            text-align: center;
+        }
+    }
+
+    .confirm .flex {
+        gap: 60px;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        padding-left: 10px;
+        border-bottom: solid 1px #9F9F9F;
+    }
+    @media screen and (max-width:540px) {
+        .confirm .flex {
+            gap: 10px;
+            padding-left: 0;
+            flex-wrap: wrap;
+        }
+    }
+
+    .confirm .flex-item {
+        width: 145px;
+    }
+
+    .confirm .flex-item .text-bold{
+       font-weight: bold;
+       color: #000;
+    }
+    @media screen and (max-width:540px) {
+        .confirm .flex-item:first-child {
+            width: 100%;
+         }
+    }
+
+    .confirm .flex-item:last-child {
+        flex: 2;
+    }
+
+    .confirm .flex-item:last-child p{
+        font-weight: normal;
+    }
+  
+    /* .confirm textarea {
+    pointer-events: none;
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    height: 26px;
+    color: #0C2C52;
+    overflow: hidden;
+    resize: none;
+    } */
+
+    .confirm #message {
+    min-height: 120px;
+    pointer-events:initial;
+    overflow: inherit;
+    }
+
+    .confirm .contact-confirm .confirm-content .confirm-button {
+    padding: 0;
+    margin: 80px auto 0;
+    border: none;
+    justify-content: center;
+    }
+
+    @media screen and (max-width:540px) {
+    .confirm .contact-confirm .confirm-content .confirm-button {
+        gap: 30px;
+        margin-top: 60px;
+        flex-direction: column-reverse;
+    }
+    }
+
+    .confirm input[type="submit"] {
+        width: 50%;
+        margin: 0;
+    }
+    @media screen and (max-width:540px) {
+        .confirm input[type="submit"] {
+            width: 100%;
+        }
+    }
+
+    input.btn_back {
+        width: 50%;
+        display: flex;
+        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+        height: 66px;
+        font-size: 18px;
+        color: white;
+        text-decoration-line: none;
+        background: #9F9F9F;
+        border: none;
+        box-shadow: 4px 4px 0 rgb(127, 127, 127);
+    }
+    @media screen and (max-width:540px) {
+        input.btn_back {
+            width: 100%;
+        }
+    }
+
+      
+/*============================
+　お問い合わせフォーム送信完了
+================================*/
+
+.complete {
+    padding: 70px 0 120px;
+    font-size: 18px;
+    margin-top: 80px;
+}
+@media screen and (max-width:540px) {
+    .complete {
+        padding: 80px 0;
+        margin-top: 0;
+        font-size: 16px;
+    }
+}
+
+.complete .container{
+    max-width: 930px;
+    width: calc(100% - 80px);
+    margin: auto;
+}
+@media screen and (max-width:540px) {
+    .complete .container{
+        width: calc(100% - 60px);
+    }
+}
+
+.complete h2 {
+    color: #000;
+    margin-bottom: 50px;
+    font-size: 40px;
+    text-align: center;
+}
+@media screen and (max-width:540px) {
+    .complete h2 {
+        margin-bottom: 40px;
+        font-size: 28px;
+        text-align: center;
+    }
+}
+
+.complete p {
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+}
+@media screen and (max-width:540px) {
+    .complete p {
+        font-size: 16px;
+      }
+}
+
+.complete a {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto 0;
+    width: 50%;
+    height: 66px;
+    font-size: 18px;
+    color: white;
+    text-decoration-line: none;
+    background: #ff1900;
+    border: none;
+    box-shadow: 4px 4px 0 rgb(165, 37, 1);
+}
+@media screen and (max-width:540px) {
+    .complete a {
+        width: 100%;
+    }
 }

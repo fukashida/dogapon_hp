@@ -15,12 +15,10 @@ Template Name: カウンセリングページ
     
         <div class="cont_txtMV">
             <h2 class="tab-sp"><img src="<?php echo get_template_directory_uri(); ?>/images/counseling/txtMV_2_sp.svg" alt="その証拠に、未経験から 動画のプロ を目指す多くの方にご受講いただいており、多くの方が卒業後も実 績を伸ばし、卒業生からはたくさんの満足の声をいただいています。"></h2>
-    
-            <div class="btnLine"><a href="https://lin.ee/R1STYRK"></a></div>
-            <p class="text-c"><small>※ドガポン公式 LINE にご登録後、「無料カウンセリング」のボタンをタップしてお申し込みいただけます。</small></p>
+            <div class="btnLine"><a href="<?php echo esc_url(home_url('/schedule')); ?>">無料カウンセリングに申し込む</a></div>
         </div>
     
-    <figure class="arrow tab-sp"><a href="#wrapCSL1"><img src="<?php echo get_template_directory_uri(); ?>/images/common/arrow.svg"></a></figure>
+    <!-- <figure class="arrow tab-sp"><a href="#wrapCSL1"><img src="<?php echo get_template_directory_uri(); ?>/images/common/arrow.svg"></a></figure> -->
     
     </div>
     
@@ -64,17 +62,17 @@ Template Name: カウンセリングページ
             <h4 class="text-c">簡単４ステップ！スマホがあれば<br class="sp">誰でもお申し込み可能です！</h4>
             <div id="contCL4_step" class="flex flex-bw">
                 <div id="step1">
-                    <p><span class="step"><img src="<?php echo get_template_directory_uri(); ?>/images/counseling/txt_step_1.svg"></span><span class="txt">LINEを友達追加</span></p>
+                    <p><span class="step"><img src="<?php echo get_template_directory_uri(); ?>/images/counseling/txt_step_1.svg"></span><span class="txt">「無料カウンセリングに<br>　申し込む」をタップ</span></p>
                     <figure><img src="<?php echo get_template_directory_uri(); ?>/images/counseling/step_img_1.png"></figure>
                 </div>
                 
                 <div id="step2">
-                    <p><span class="step"><img src="<?php echo get_template_directory_uri(); ?>/images/counseling/txt_step_2.svg"></span><span class="txt">LINEメッセージにて詳細が届きますのでそちらに従って正式にお申し込み</span></p>
+                    <p><span class="step"><img src="<?php echo get_template_directory_uri(); ?>/images/counseling/txt_step_2.svg"></span><span class="txt">申込みフォームに記載し、<br class="pc">送信</span></p>
                     <figure><img src="<?php echo get_template_directory_uri(); ?>/images/counseling/step_img_2.png"></figure>
                 </div>
                 
                 <div id="step3" class="flex">
-                    <p><span class="step"><img src="<?php echo get_template_directory_uri(); ?>/images/counseling/txt_step_3.svg"></span><span class="txt">LINEメッセージにて詳細が正式なお申し込みが完了後、当日の通話用ZoomIDをお送りしますので、当日はそちらからご参加ください。<!--正式にお申し込み。--></span></p>
+                    <p><span class="step"><img src="<?php echo get_template_directory_uri(); ?>/images/counseling/txt_step_3.svg"></span><span class="txt">申込みフォームにてお申し込み完了後、<br>メールにて日程確定の案内と当日用の<br>Zoomリンクをお送りします。</span></p>
                     <figure><img src="<?php echo get_template_directory_uri(); ?>/images/counseling/step_img_3.png"></figure>
                 </div>
                 
@@ -91,11 +89,7 @@ Template Name: カウンセリングページ
     <div class="wrapCSL_bnr">
         <div class="wrap1250">
             <p class="txtCL"><img src="<?php echo get_template_directory_uri(); ?>/images/counseling/bnr_txtCL_pc.svg" class="js-image-replace"></p>
-            <div class="flex">
-                <p class="tab-pc"><small>※ドガポン公式 LINE にご登録後、「無料カウンセリング」のボタンをタップしてお申し込みいただけます。</small></p>
-                <div class="btnLine"><a href="https://lin.ee/R1STYRK"></a></div>
-            </div>
-            <p class="sp"><img src="<?php echo get_template_directory_uri(); ?>/images/counseling/bnr_txtCL_2_sp.svg"></p>
+            <div class="btnLine"><a href="<?php echo esc_url(home_url('/schedule')); ?>">無料カウンセリングに申し込む</a></div>
         </div>
     </div>
     
@@ -150,10 +144,7 @@ Template Name: カウンセリングページ
     <div class="wrapCSL_bnr">
         <div class="wrap1250">
             <p class="txtCL"><img src="<?php echo get_template_directory_uri(); ?>/images/counseling/bnr_txtCL_pc.svg" class="js-image-replace"></p>
-            <div class="flex">
-                <p class="tab-pc"><small>※ドガポン公式 LINE にご登録後、「無料カウンセリング」のボタンをタップしてお申し込みいただけます。</small></p>
-                <div class="btnLine"><a href="https://lin.ee/R1STYRK"></a></div>
-            </div>
+            <div class="btnLine"><a href="<?php echo esc_url(home_url('/schedule')); ?>">無料カウンセリングに申し込む</a></div>
             <p class="sp"><img src="<?php echo get_template_directory_uri(); ?>/images/counseling/bnr_txtCL_2_sp.svg"></p>
         </div>
     </div>
