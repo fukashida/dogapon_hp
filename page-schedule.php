@@ -81,9 +81,8 @@ if( !empty($_POST['btn_confirm']) ) {
 
     <!-- ここに確認ページが入る -->
 
-
     <section class="confirm">
-            <form method="post" action="/thanks">
+            <form method="post" action="/thanks" name="felmat">
                 <div class="contact-confirm">
                     <h2>ご入力内容確認</h2>
                     <div class="container">
@@ -151,13 +150,12 @@ if( !empty($_POST['btn_confirm']) ) {
 
     <!-- ここまで確認ページが入る -->
 
-
+    
 
     <?php else: ?>
 
 
     <!-- ここに問い合わせページが入る -->
-
 
     <section class="contact">
         <h2>無料カウンセリング<br class="sp">お申込フォーム</h2>
@@ -177,7 +175,7 @@ if( !empty($_POST['btn_confirm']) ) {
             <?php if(!empty($error_message[5])):?>
                 <p class="error_msg_5"><?php echo $error_message[5];?></p>
             <?php endif;?>
-            <form method="post" action="">
+            <form method="post" action="" name="felmat">
                 <div class="contact-content">
 
                         <div class="flex-item">

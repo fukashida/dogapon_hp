@@ -50,6 +50,6 @@ if(count($_POST)){
         </div>
     </div>
 </section>
-<script type="text/javascript" src="https://js.felmat.net/fmcv.js?adid=X9807N&uqid=成果識別子"></script>
-    
+<script type="text/javascript" src="https://js.felmat.net/fmcv.js?adid=X9807N&uqid={{orderNo}}"></script>
+
 <?php get_footer(); ?>
