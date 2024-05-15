@@ -50,6 +50,6 @@ if(count($_POST)){
         </div>
     </div>
 </section>
-<script type="text/javascript" src="https://js.felmat.net/fmcv.js?adid=X9807N&uqid={{orderNo}}"></script>
+<script type="text/javascript" src="https://js.felmat.net/fmcv.js?adid=X9807N&uqid=<?php echo $_POST['email']; ?>"></script>
 
 <?php get_footer(); ?>
