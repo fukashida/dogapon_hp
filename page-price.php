@@ -17,14 +17,6 @@ Template Name: 料金ページ
 </div>
 
 <section id="wrapPR1" class="wrapDairisekii">
-	<div id="contPR1" class="wrap1250 contPR1-3">
-        <div class="flex">
-            <h2><img src="<?php echo get_template_directory_uri(); ?>/images/price/txt1_specialist_pc.svg" alt="ドガポンマーケティング大学院　スペシャリストコース3ヶ月間"></h2>
-            <p>企業を相手に戦う<br class="pc">有能ディレクターへ<br class="pc">歴戦のスペシャリストたちが<br class="pc">引き上げるコース</p>
-        </div>
-        <p id="txt2"><img src="<?php echo get_template_directory_uri(); ?>/images/price/txt2_specialist_pc.svg" alt="一括料金 770,000 円 (税込)" class="js-image-replace"></p>
-        <p id="txt3" class="text-c"><small>※サービス提供開始は決済完了後翌月1日となります。</small></p>
-    </div>
 	
     <div id="contPR1" class="wrap1250 contPR1-1">
         <div class="flex">
@@ -43,7 +35,7 @@ Template Name: 料金ページ
         <p id="txt2"><img src="<?php echo get_template_directory_uri(); ?>/images/price/txt2_expert_pc.svg" alt="一括料金 330,000 円 (税込)" class="js-image-replace"></p>
         <p id="txt3" class="text-c"><small>※サービス提供開始は決済完了後翌月1日となります。</small></p>
     </div>
-	<p id="txt3" class="text-coursepdf"><a href="https://dogapon.com/product/course.pdf" target="_blank">各コースについて</a><br/>
+	<p id="txt3" class="text-coursepdf"><a href="<?php echo get_template_directory_uri(); ?>/pdf/dogapon_material.pdf" target="_blank">新コースについて</a><br/>
 </section>
 
 <section id="wrapPR2">
