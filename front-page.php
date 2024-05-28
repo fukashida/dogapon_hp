@@ -10,16 +10,10 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide"><figure class="slide1"><a href="<?php echo home_url(); ?>/counseling"><img src="<?php echo get_template_directory_uri(); ?>/images/top/btnSlider_CSL.svg"></a><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide1bg_pc.jpg"></figure></div>
-                <div class="swiper-slide"><figure class="slide2"><a href="<?php echo home_url(); ?>/counseling"><img src="<?php echo get_template_directory_uri(); ?>/images/top/btnSlider_CSL.svg"></a><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide2bg_pc.jpg"></figure></div>
-                <div class="swiper-slide"><figure class="slide3"><a href="<?php echo home_url(); ?>/counseling"><img src="<?php echo get_template_directory_uri(); ?>/images/top/btnSlider_CSL.svg"></a><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide3bg_pc.jpg"></figure></div>
+                    <div class="swiper-slide"><figure class="slide1"><a href="<?php echo home_url(); ?>/counseling"><img src="<?php echo get_template_directory_uri(); ?>/images/top/btnSlider_CSL.png"></a><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide1bg_pc.png"></figure></div>
+                <div class="swiper-slide"><figure class="slide2"><a href="<?php echo home_url(); ?>/counseling"><img src="<?php echo get_template_directory_uri(); ?>/images/top/btnSlider_CSL.png"></a><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide2bg_pc.jpg"></figure></div>
+                <div class="swiper-slide"><figure class="slide3"><a href="<?php echo home_url(); ?>/counseling"><img src="<?php echo get_template_directory_uri(); ?>/images/top/btnSlider_CSL.png"></a><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide3bg_pc.jpg"></figure></div>
             </div>
-    
-<!--div class="swiper-wrapper">
-    <div class="swiper-slide"><a href="<?php echo home_url(); ?>/counseling"><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide1_pc.jpg"></a></div>
-    <div class="swiper-slide"><a href="<?php echo home_url(); ?>/counseling"><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide2_pc.jpg"></a></div>
-    <div class="swiper-slide"><a href="<?php echo home_url(); ?>/counseling"><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide3_pc.jpg"></a></div>
-</div-->
 
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
@@ -31,7 +25,7 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                     <!-- Slides -->
-                <div class="swiper-slide"><a href="<?php echo home_url(); ?>/counseling"><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide1_sp.jpg"></a></div>
+                <div class="swiper-slide"><a href="<?php echo home_url(); ?>/counseling"><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide1_sp.png"></a></div>
                         <div class="swiper-slide"><a href="<?php echo home_url(); ?>/counseling"><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide2_sp.jpg"></a></div>
                         <div class="swiper-slide"><a href="<?php echo home_url(); ?>/counseling"><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide3_sp.jpg"></a></div>
         </div>
@@ -42,256 +36,236 @@
 </div>
 
 <section id="wrapCL2" class="wraplineBG toppage">
-        <h2><div class="wrap1250"><span class="orange">6</span> ヶ月で自立した<br class="sp"><mark class="mark_orange">動画のプロ</mark>になろう！</div></h2>
-        <p class="wrap1250 text-c">今も現役で活躍中の『動画のプロ』集団が未経験からでも<br class="pc">しっかりと収入を得ることにコミットしたサポートをいたします！</p>
-        <ul class="wrap1250 flex flex-bw">
-            <li>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/top/pointImg1.png" alt="未経験だけど動画編集について学んでみたい！">
-            </li>
-            <li>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/top/pointImg2.png" alt="動画編集をやってるけど全く収入に繋がらない…">
-            </li>
-            <li>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/top/pointImg3.png" alt="これから伸びる動画業界に転職したい！">
-            </li>
-            <li>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/top/pointImg4.png" alt="在宅・フリーランスで自由な働き方がしたい！">
-            </li>
-        </ul>
+  <div class="wrap1250">
+    <h2><span>ドガポン<br class="sp-tb">マーケティング大学校</span>とは</h2>
+    <p>日本トップレベルの実績を誇る<br class="sp">YouTube企業運営！<br>
+    <span>業界第一線で活躍する<br class="sp">現役プロの直接指導で<br>
+    自立したフリーランスを目指す<br class="sp">動画ビジネススクール</span></p>
+    <h3>ドガポンは<br class="sp">こんな方におすすめ！</h3>
+    <div class="flex">
+      <div class="box">
+        <p>動画ビジネスで<br>
+          月20万以上稼ぎたい方</p>
+      </div>
+      <div class="box">
+          <p>低単価案件で苦戦中の<br>
+            動画編集者の方</p>
+      </div>
+      <div class="box">
+          <p>マーケティングを学び<br>
+            活動の幅を広げたい方</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 
 <section id="wrapAbout" class="wrapDairisekii">
     <div class="wrap1250">
-        <h2><img src="<?php echo get_template_directory_uri(); ?>/images/top/logoTxt.svg" alt="ドガポンマーケティング大学校とは"></h2>
-        <iframe src="https://player.vimeo.com/video/498893414" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-        <div class="flex flex-bw">
-            <div id="about_1">
-                <div class="aboutBox">
-                    <figure><img src="<?php echo get_template_directory_uri(); ?>/images/top/aboutImg1.jpg"></figure>
-                    <p>現役の動画のプロの<br>ノウハウを全て提供</p>
-                </div>
-                <p>ドガポンマーケティング大学校を運営している<strong class="orange">ライアートプロモーション</strong>は多くの企業からYouTube チャンネル運営や動画制作を依頼されている現役の<strong class="orange">動画のプロ</strong>集団です。</p>
-            </div>
-
-            <div id="about_2">
-                <div class="aboutBox">
-                    <figure><img src="<?php echo get_template_directory_uri(); ?>/images/top/aboutImg2.jpg"></figure>
-                    <p>スキルの習得だけでなく<br>結果の獲得に<br class="sp">コミットした<br>サポート体制</p>
-                </div>
-                <p>結果とは、<strong class="orange">収入・実績・生活</strong>など個々人にとって様々ですが、それらを手に入れるためには<strong class="orange">実践・継続</strong>ということが必要不可欠です。そのためにドガポンでは、<strong class="orange">サポーター</strong>と<strong class="orange">チューター</strong>のダブルサポート体制で徹底的に結果にコミットしたサポートを実施しております。</p>
-            </div>
-
-            <div id="about_3">
-                <div class="aboutBox">
-                    <figure><img src="<?php echo get_template_directory_uri(); ?>/images/top/aboutImg3.jpg"></figure>
-                    <p>しっかり収入を<br class="sp">得て自立した<br>動画のプロになることに<br>特化したカリキュラム</p>
-                </div>
-                <p><strong class="orange">クライアントの利益</strong>を考えた動画制作を行える人は希少価値が高いので高単価が支払われ、継続的に依頼が舞い込みます。ドガポンのカリキュラムは下請け単純労働の動画制作者ではなく、希少な<strong class="orange">動画のプロ</strong>になることに特化したカリキュラムです。</p>
+        <h2>ドガポンマーケティング大学校で<br>
+            自立したフリーランスになれる理由</h2>
+        <div class="flex">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/top/wrapAbout01.png" alt="日本トップレベルの実績を誇るYouTube企業が運営の画像">
+            <div class="item">
+              <h3>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/top/wrapAbout_t1.svg" alt="">
+                日本トップレベルの実績を誇る<br>
+                YouTube企業が運営
+              </h3>
+              <p>ドガポンを運営するライアートプロモーションは、<br>
+                  累計5億再生以上のYouTuber育成実績や、PRや運用代行など350以上の案件を手掛けてきた業界トップレベルの実績を誇る企業。6年以上の経験からカリキュラムを作成しています。</p>
             </div>
         </div>
-        <ul class="flex">
-            <li id="btnReason" class="btnOrange"><a href="<?php echo home_url(); ?>/reason">選ばれる理由を見る</a></li>
-            <li id="btnCurriculum" class="btnOrange"><a href="<?php echo home_url(); ?>/curriculum">カリキュラムを見る</a></li>
-        </ul>
+        <div class="flex f2">
+          <div class="item">
+            <h3>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/top/wrapAbout_t2.svg" alt="">
+              現場の第一線で活躍する<br>
+              現役プロが講師を務める
+            </h3>
+            <p>ドガポンの講師陣は、講師業のみを仕事にしているのではなく、現場の第一線で活躍するディレクターやクリエイターです。だからこそ現場の生の経験からスキルを学べ、高い再現性を実現できています。</p>
+          </div>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/top/wrapAbout02.png" alt="現場の第一線で活躍する現役プロが講師を務めるの画像">
+        </div>
+        <div class="flex f3">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/top/wrapAbout03.png" alt="YouTube運用代行等の企業案件スキルを学べるの画像">
+            <div class="item">
+              <h3>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/top/wrapAbout_t3.svg" alt="">
+                YouTube運用代行等の<br>
+                企業案件スキルを学べる
+              </h3>
+              <p>動画スクールの競合他社ほとんどが動画編集者を<br>
+                育成するコンセプトの中、ドガポンでは動画マーケティングやディレクション、クライアントワークなどを学び、高単価案件を獲得できるノウハウを提供しています。</p>
+            </div>
+        </div>
+        <div class="flex f4">
+          <div class="item">
+            <h3>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/top/wrapAbout_t4.svg" alt="">
+              徹底した手厚いサポートを実装
+            </h3>
+            <p>ドガポンでは講師以外にも、学習監理を行うチューターも専属で付けており、Zoom等を用いたマンツーマン指導や毎月2回以上のコーチング面談などで、徹底的に結果にコミットしたサポートを実施しております。</p>
+          </div>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/top/wrapAbout04.png" alt="現場の第一線で活躍する現役プロが講師を務めるの画像">
+        </div>
     </div>
 </section>
 
 <section id="wrapPR2">
         <div id="contPR2" class="wrap1250">
-            <div id="contPR2_r">
-                <p class="sp"><img src="<?php echo get_template_directory_uri(); ?>/images/price/txt3.svg" alt="受講のお申し込みやお支払いの相談などは、無料カウンセリングで承っておりますのでお気軽にお申し込みください。"></p>
-                <p class="tab-pc">受講のお申し込みやお支払いの相談などは、<br>無料カウンセリングで承っておりますので<br>お気軽にお申し込みください。</p>
-                <div class="btnCS2"><a href="<?php echo home_url(); ?>/counseling">無料カウンセリングは<br class="sp">こちら</a></div>
+            <h2>ドガポンマーケティング大学校<br>
+              ２つのコース紹介</h2>
+            <div class="flex">
+                <div class="course01">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/top/course_director.png" alt="現場の第一線で活躍する現役プロが講師を務めるの画像">
+                  <h3>動画制作ディレクターコース</h3>
+                  <p>高単価案件を獲得できる動画制作者や、編集ディレクターを目指すコースです！動画編集やサムネイル等の制作スキルや数字を伸ばすマーケティングも学べます。</p>
+                  <a href="<?php echo home_url(); ?>/course_director">コース詳細を見る</a>
+                </div>
+                <div class="course02">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/top/course_business.png" alt="現場の第一線で活躍する現役プロが講師を務めるの画像">
+                  <h3>YouTube運用代行ビジネスコース</h3>
+                  <p>継続的に売上を立てる業界注目のYouTube運用代行ビジネスを学ぶコースです。制作・マーケ・ディレクション・法人営業まで一気通貫で学べます。</p>
+                  <a href="<?php echo home_url(); ?>/course_business">コース詳細を見る</a>
+                </div>
             </div>
         </div>
 </section>
         
-<section id="wrapPR4" class="toppage">
-        <h3><div class="wrap1250">受講生の声</div></h3>
-        <div id="wrapPR4_1" class="wraplineBG">
-            <h4 class="titlePR4 wrap1250">ドガポンマーケティング大学校は、未経験から<mark class="mark_orange">動画のプロ</mark>を目指す多くの方にご受講いただいております。多くの方が卒業後も実績を伸ばし、<mark class="mark_orange">動画のプロ</mark>として収入を得ながら活動されており、卒業生からはたくさんの満足の声をいただいております。</h4>
-
-            <div class="wrap1250">
-                <div class="slideTwitter">
-                    <div class="slide">
-                        <blockquote class="twitter-tweet" data-conversation="none">
-                            <figure><img src="<?php echo get_template_directory_uri(); ?>/images/top/tweet1.jpg"></figure>
-                            <p lang="ja" dir="ltr">【スクールに入って良かったこと】<br><br>映像スクールに入る前は、右も左も分からず、どんなソフトで編集をすれば良いかすら分からなかった。<br><br>しかし、今こうして編集ディレクターとして活動できるのは、その第一歩のおかげなんだと確信できる。<br><br>本当に良かった😄<br><a href="https://twitter.com/hashtag/%E5%8B%95%E7%94%BB%E7%B7%A8%E9%9B%86?src=hash&amp;ref_src=twsrc%5Etfw">#動画編集</a> <a href="https://twitter.com/hashtag/%E3%83%89%E3%82%AC%E3%83%9D%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#ドガポン</a></p>
-                            <figure><img src="<?php echo get_template_directory_uri(); ?>/images/top/tweet1_foot.jpg"></figure>
-                        </blockquote>
-                    </div>
-
-                    <div class="slide">
-                        <blockquote class="twitter-tweet" data-conversation="none">
-                            <figure><img src="<?php echo get_template_directory_uri(); ?>/images/top/tweet2.jpg"></figure>
-                            <p lang="ja" dir="ltr">今日で　<a href="https://twitter.com/hashtag/%E3%83%89%E3%82%AC%E3%83%9D%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#ドガポン</a> 卒業<br><br>途中だらける事もあったけど、続けられたのは講師陣のおかげ<br><br>環境に助けられた<br><br>特に上米良さんにはちょこちょこ声をかけていただいて、うまくアクセルとブレーキを踏むことができた<br><br>感謝しかない<br><br>今日が節目なだけで何かが変わるわけではないので、引き続き積み木してく😌</p>
-                            <figure><img src="<?php echo get_template_directory_uri(); ?>/images/top/tweet2_foot.jpg"></figure>
-                        </blockquote>
-                    </div>
-                    
-                    <div class="slide">
-                        <blockquote class="twitter-tweet" data-conversation="none">
-                            <figure><img src="<?php echo get_template_directory_uri(); ?>/images/top/tweet3.jpg"></figure>
-                            <p lang="ja" dir="ltr">今日でドガポン卒業です😭<br><br>半年早っ！<br>ドガポン受講と同時に就職して両立できるか不安だった私が、<br><br>仕事しつつ、夜は沢山ドガポン案件をやっている…<br><br>えらい進歩やで😇<br>ほんとドガポンで良かった！✨<br><br>ここで一旦一区切りだけど、<br>まだまだこれから！<br>でもひとまずお疲れ様でしたー🙌<a href="https://twitter.com/hashtag/%E3%83%89%E3%82%AC%E3%83%9D%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#ドガポン</a></p>
-                            <figure><img src="<?php echo get_template_directory_uri(); ?>/images/top/tweet3_foot.jpg"></figure>
-                        </blockquote>
-                    </div>
-                    
-                    <div class="slide">
-                        <blockquote class="twitter-tweet" data-conversation="none">
-                            <figure><img src="<?php echo get_template_directory_uri(); ?>/images/top/tweet4.jpg"></figure>
-                            <p lang="ja" dir="ltr">ドガポンでたった半年でメンタルがこんなに変われたのは完璧な講師陣と完璧なチューターさんのおかげだなぁ…。<br>こんな所ないよ？私も予想外だったもん。講師陣のおかげで技術も勿論凄く磨けるしチューターさんは寄り添ってくれる感じ。<br><br>だから頑張れる。素敵だ✨<a href="https://twitter.com/hashtag/%E3%83%89%E3%82%AC%E3%83%9D%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#ドガポン</a></p>
-                            <figure><img src="<?php echo get_template_directory_uri(); ?>/images/top/tweet4_foot.jpg"></figure>
-                        </blockquote>
-                    </div>
-                    
-                    <div class="slide">
-                        <blockquote class="twitter-tweet" data-conversation="none">
-                            <figure><img src="<?php echo get_template_directory_uri(); ?>/images/top/tweet5.jpg"></figure>
-                            <p lang="ja" dir="ltr">おはようございます！<a href="https://twitter.com/hashtag/%E4%BB%8A%E6%97%A5%E3%81%AE%E7%A9%8D%E3%81%BF%E4%B8%8A%E3%81%92?src=hash&amp;ref_src=twsrc%5Etfw">#今日の積み上げ</a> はサムネ・動画編集の課題課題課題です<br>(ここ最近毎回なので重ねてみました)<br><a href="https://twitter.com/hashtag/%E3%83%89%E3%82%AC%E3%83%9D%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#ドガポン</a> にはセミナー動画を受講生なら誰でも見られるのですが、これが役にしか立たない！<br><br>教わったのは【サムネはモデリング命】という名言。<br><br>あと【サムネなめたらあかん！】です😆</p>
-                            <figure><img src="<?php echo get_template_directory_uri(); ?>/images/top/tweet5_foot.jpg"></figure>
-                        </blockquote>
-                    </div>
-                    
-                    <div class="slide">
-                        <blockquote class="twitter-tweet" data-conversation="none">
-                            <figure><img src="<?php echo get_template_directory_uri(); ?>/images/top/tweet6.jpg"></figure>
-                            <p lang="ja" dir="ltr">13時間で60万回再生…<br>僕自身、いままでの人生でそれだけの人に会ったことがあるのかな？<br>たぶんかすりもしないな🙄笑<br><br>それだけの人に影響を与えることができる。驚異的な威力だ！<br><br>もっともっと多くの人に見てもらえるものを生み出していきたいです✨<br><a href="https://twitter.com/hashtag/%E3%83%89%E3%82%AC%E3%83%9D%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#ドガポン</a> <a href="https://twitter.com/hashtag/%E5%8B%95%E7%94%BB%E7%B7%A8%E9%9B%86?src=hash&amp;ref_src=twsrc%5Etfw">#動画編集</a></p>
-                            <figure><img src="<?php echo get_template_directory_uri(); ?>/images/top/tweet6_foot.jpg"></figure>
-                        </blockquote>
-                    </div>
-                </div>
-                <p>※掲載している内容はあくまでも個人の感想であり、効果を保証するものではありません</p>
-            </div>
+<section id="wrapPR3" class="toppage">
+        <div id="wrapPR4_1" class="wrap1250">
+            <h2><span>ドガポンマーケティング大学校を運営する</span><br>
+              株式会社ライアートプロモーション</h2>
+              <div class="flex">
+                  <div class="box">
+                      <p>育成YouTuber累計</p>
+                      <img src="<?php echo get_template_directory_uri(); ?>/images/top/liart01.svg" alt="4,000,000">
+                      <p>以上の登録獲得数</p>
+                  </div>
+                  <div class="box">
+                      <p>運用YouTube累計</p>
+                      <img src="<?php echo get_template_directory_uri(); ?>/images/top/liart02.svg" alt="500,000,000">
+                      <p>以上の登録獲得数</p>
+                  </div>
+                  <div class="box b2">
+                      <p>運運用代行やPRなど</p>
+                      <img src="<?php echo get_template_directory_uri(); ?>/images/top/liart03.svg" alt="350">
+                      <p>以上の取引社数</p>
+                  </div>
+              </div>
+              <p>2017年11月に設立以降、現役Jリーガーやキャバ嬢の日本初YouTuber化の成功、<br class="pc">美容クリニックのYouTube参入の火付け役、インフルエンサー向けLINE型ASPの開発など、<br class="pc">多数の業界実績を持つ動画マーケティング企業です。</p>
         </div>
 </section>
 
-<div id="contBlog_bottom" class="toppage">    
-<section id="wrapComent">
-    <h3>受講生インタビュー</h3>
-    <section class="contBlog_temp wraplineBG">
-        <h4 class="titlePR4 wrap1250">ドガポンを受講して転職された方や収入アップに成功された方などキャリアアップを果たし、今も業界で活躍されているドガポン卒業生のインタビューをご紹介！</h4>
-        <div id="wrapArticleBG">
-        <div class="flex wrapArticle wrap1250">
-            <?php query_posts( array(
-                    'post_type' => 'post',
-                     'tag' => 'voice',
-                     'posts_per_page' => 6,
-                     'no_found_rows' => true,
-            )); ?>
-                <?php if(have_posts()): ?>
-                <?php while(have_posts()):the_post(); ?>
 
-		<article>
-                <a href="<?php the_permalink();?>"><div>
-                   <figure>
-                       <?php the_post_thumbnail( 'medium', array('class' => 'skip-lazy') ); ?>
-                    </figure>
-                  <p class="date"><?php the_time('Y.m.d'); ?></p>
-                  <h4>
-                      
-                          <?php
-                          if(mb_strlen($post->post_title, 'UTF-8')>27){
-                              $title= mb_substr($post->post_title, 0, 27, 'UTF-8');
-                              echo $title.'...';
-                          }else{
-                              echo $post->post_title;
-                          }
-                          ?>
-                       </h4>
-                  </div></a>
-            </article>
+  <section id="wrapLiart">
+      <div class="wrap1250">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/top/liart_logo.svg" alt="現場の第一線で活躍する現役プロが講師を務めるの画像">
+        <p>誰かの活躍をエンパワーメントする集団として<br>
+          各分野でのコンテンツ発信文化を牽引する</p>
+          <a href="https://liartpromotion.co.jp/">ライアートプロモーションHPはこちら</a>
+      </div>
+  </section>
 
-		<?php
-		endwhile;
-		endif;
-        wp_reset_query()
-		?>
-            
-        </div>
-            <p id="btnMore"><a href="<?php echo home_url(); ?>/tag/voice"><img src="<?php echo get_template_directory_uri(); ?>/images/top/btnMore.svg"></a></p>
-        </div>
-    </section>
-</section>
-</div>
 
 <section id="wrapTP" class="toppage">
-        <h3><div class="wrap1250">限定コンテンツを一部無料で公開</div></h3>
-        <div id="wrapTP_1">
-            <div class="wrap1250">
-                <p>ドガポンマーケティング大学校は、動画業界で活動している方や、これから活動したいと思っている方を応援しています。その気持ちから、<span class="colorYL">独自に制作している限定コンテンツを一部無料でプレゼント</span>しております。</p>
-                <div class="flex">
-                    <figure><img src="<?php echo get_template_directory_uri(); ?>/images/top/book.png"></figure>
-                    <p>動画業界で<span class="colorYL">収入を得て自立していくため</span>の限定コンテンツを無料でダウンロードいただけます。「動画制作に興味がある」「どんなものか見てみたい」といった方は下記ページからお気軽にお受け取りください。</p>
+    <div id="wrapTP_1">
+        <h2>今も業界で活躍されている<br>
+          ドガポン卒業生の<br class="sp">インタビューをご紹介します！</h2>
+          <div class="swiper-container post-slider">
+            <div class="swiper-wrapper">
+              <?php
+              $loop = new WP_Query(array(
+                'post_type' => 'post', // ポストタイプを設定 デフォルト投稿はそのまま
+              ));
+              ?>
+              <?php
+              /* Start the Loop */
+              while ($loop->have_posts()) : $loop->the_post();
+              ?>
+                <div class="swiper-slide">
+                      <?php if (has_post_thumbnail()) : ?>
+                        <figure class="post__thumb--img">
+                          <a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt=""></a>
+                        </figure>
+                      <?php elseif (!has_post_thumbnail()) : ?>
+                        <figure class="post__thumb--img">
+                          <!-- アイキャッチ画像がない場合  -->
+                          <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/top/no-imag.png" alt=""></a>
+                        </figure>
+                      <?php endif; ?>
                 </div>
-                <div class="btnOrange"><a href="<?php echo home_url(); ?>/limitedcontents">限定コンテンツを受け取る</a></div>
+              <?php
+              endwhile;
+              wp_reset_query();
+              ?>
             </div>
-        </div>
+            <!-- Add Arrows -->
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="wrap1250">
+          <a href="<?php echo home_url(); ?>/tag/voice"><img class="more" src="<?php echo get_template_directory_uri(); ?>/images/top/more.svg" alt=""></a>
+          </divv>
+    </div>
 </section>
 
 <?php get_footer(); ?>
 
+
 <script>
 /* メインスライダー
 /*----------------------------------------------------------*/
-let mySwiper = new Swiper ('.swiper-container', {
+let mySwiper = new Swiper ('.toppage', {
   // 以下にオプションを設定
     loop: true,
     autoplay: {
-        delay: 4000,
+        delay: 3000,
     },
     freeMode: false,
-    draggable: true,
-  //ページネーション表示の設定
-  pagination: { 
-    el: '.swiper-pagination', //ページネーションの要素
-    type: 'bullets', //ページネーションの種類
-    clickable: true, //クリックに反応させる
-  },
- 
-  //ナビゲーションボタン（矢印）表示の設定
-  navigation: { 
-    nextEl: '.swiper-button-next', //「次へボタン」要素の指定
-    prevEl: '.swiper-button-prev', //「前へボタン」要素の指定
-  },
- 
-  //スクロールバー表示の設定
-  scrollbar: { 
-    el: '.swiper-scrollbar', //要素の指定
-  },
+    draggable: true, 
 })
 </script>
 
 
-<script type="text/javascript">
- $('.slideTwitter').slick({
-  slidesToShow: 4,
-  slidesToScroll:1,
-  autoplay: true,
-  autoplaySpeed: 6000,
-  prevArrow: '<div class="slick-button-prev"></div>',
-    nextArrow: '<div class="slick-button-next"></div>',
-  dots:true,
-     //レスポンシブでの動作を指定
-    responsive: [{
-
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3
-      }
-
-    }, {
-
-      breakpoint: 640,
-      settings: {
-        slidesToShow: 1
-      }
-
-    }]
-});
-  </script>
+<!-- swiper設定用js -->
+<script>
+  let mySwiper2 = new Swiper('.post-slider', {
+    // デフォルトの設定
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+      },
+      420: {
+        slidesPerView: 1.35,
+        spaceBetween: 10,
+      },
+      600: {
+        slidesPerView: 1.4,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1440: {
+        slidesPerView: 3,
+        spaceBetween: 150,
+      },
+      1921: {
+        slidesPerView: 5,
+      },
+    },
+  })
+</script>
 
 </body>  
 </html>

@@ -5,9 +5,9 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/blog/slide1_pc.jpg"></div>
-                    <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/blog/slide2_pc.jpg"></div>
-                    <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/blog/slide3_pc.jpg"></div>
+                    <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide1_pc.png"></div>
+                    <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide2_pc.jpg"></div>
+                    <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide3_pc.jpg"></div>
             </div>
 
             <!-- If we need navigation buttons -->
@@ -19,9 +19,9 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/blog/slide1_sp.jpg"></div>
-                    <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/blog/slide2_sp.jpg"></div>
-                    <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/blog/slide3_sp.jpg"></div>
+                    <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide1_sp.png"></div>
+                    <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide2_sp.jpg"></div>
+                    <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/images/top/slide3_sp.jpg"></div>
             </div>
 
             <!-- If we need navigation buttons -->

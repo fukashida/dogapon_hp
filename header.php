@@ -45,7 +45,7 @@
         <meta property="og:title" content="<?php bloginfo('name'); ?>">
         <meta property="og:type" content="website">
         <meta property="og:url" content="<?php echo home_url(); ?>">
-        <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/top/slide1_pc.jpg">
+        <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/top/slide1_pc.png">
 	<?php elseif(is_home()) : //ブログページ（ブログサイトの場合はトップページ） ?>
     <meta name="description" content="<?php echo get_the_excerpt(); ?>">
     <meta property="og:description" content="<?php echo get_the_excerpt(); ?>" />
@@ -53,7 +53,7 @@
         <meta property="og:title" content="<?php the_title(); ?>|<?php bloginfo('name'); ?>">
         <meta property="og:type" content="blog">
         <meta property="og:url" content="<?php echo home_url(); ?>/blog">
-        <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/top/slide1_pc.jpg">
+        <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/top/slide1_pc.png">
 	<?php elseif(is_single()) : //記事ページ ?>
     <meta name="description" content="<?php echo get_the_excerpt(); ?>">
     <meta property="og:description" content="<?php echo get_the_excerpt(); ?>" />
@@ -69,7 +69,7 @@
         <meta property="og:title" content="<?php the_title(); ?>|<?php bloginfo('name'); ?>">
         <meta property="og:type" content="article">
         <meta property="og:url" content="<?php echo get_page_link();?>">
-    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/top/slide1_pc.jpg">
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/top/slide1_pc.png">
     
 		<?php elseif(is_archive()) : //アーカイブページ（カテゴリーページなど） ?>
     <meta property="og:description" content="よくある質問" />
@@ -77,7 +77,7 @@
         <meta property="og:title" content="よくある質問">
         <meta property="og:type" content="article">
         <meta property="og:url" content="<?php echo (empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
-    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/blog/slide3_pc.jpg">
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/blog/slide3_pc.png">
 	
 	<?php elseif(is_search()) : //検索結果ページ ?>
     <meta name="description" content="<?php bloginfo('description'); ?>">
@@ -86,7 +86,7 @@
         <meta property="og:title" content="<?php the_title(); ?>|<?php bloginfo('name'); ?>">
         <meta property="og:type" content="article">
         <meta property="og:url" content="<?php echo (empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
-    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/top/slide1_pc.jpg">
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/top/slide1_pc.png">
 
 	<?php elseif(is_404()): //404ページ ?>
     <meta name="description" content="<?php bloginfo('description'); ?>">
@@ -95,7 +95,7 @@
         <meta property="og:title" content="<?php the_title(); ?>|<?php bloginfo('name'); ?>">
         <meta property="og:type" content="article">
         <meta property="og:url" content="<?php echo (empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
-    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/top/slide1_pc.jpg">
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/top/slide1_pc.png">
 	<?php endif; ?>
     <meta name="twitter:card" content="summary_large_image">
     
@@ -129,7 +129,8 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   
   <meta name="theme-color" content="#fafafa">
-  
+
+
 <?php wp_head(); ?>
 </head>
     
@@ -139,50 +140,33 @@
         <div class="pc">
             <h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/common/logoHead.svg" alt="ドガポンマーケティング大学校"></a></h1>
             <nav class="menu">
-                <li class="menu__single menu_top <?php if(is_page('reason')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/reason" class="init-bottom">選ばれる理由</a>
-                    <ul class="menu__second-level">
-                        <li><a href="<?php echo home_url(); ?>/reason#knowhow">最先端の動画ノウハウ</a></li>
-                        <li><a href="<?php echo home_url(); ?>/reason#support">結果にフォーカスしたサポート</a></li>
-                        <li><a href="<?php echo home_url(); ?>/reason#professional">未経験から動画のプロへ</a></li>
-                    </ul>
-                </li>
                 <li class="menu__single menu_top <?php if(is_page('curriculum')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/curriculum" class="init-bottom">カリキュラム</a>
                     <ul class="menu__second-level price">
                         <li class="<?php if(is_page('price')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/curriculum/price">料金</a></li>
                     </ul>
                 </li>
-                <li class="menu_top <?php if(is_tag('voice')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/tag/voice">受講生インタビュー</a></li>
-                <li class="menu_top <?php if(is_page('limitedcontents')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/limitedcontents">限定コンテンツ</a></li>
-                <li class="menu_top <?php if(is_page('blog')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/blog">ドガポンブログ</a></li>
+                <li class="menu_top <?php if(is_tag('voice')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/tag/voice">受講生の声</a></li>
                 <li class="menu_top <?php if(is_post_type_archive('faq')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/faq">よくある質問</a></li>
             </nav>
-            <div class="menu_right <?php if(is_page('counseling')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/counseling">無料<br>カウンセリング</a></div>
+            <div class="menu_right <?php if(is_page('counseling')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/counseling">無料カウンセリング</a></div>
         </div>
         <!-- ハンバーガーボタン -->
+        <div class="tb-sp">
+          <h2><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/common/logoHead.svg" alt="ドガポンマーケティング大学校"></a></h2>
+          <div class="menu_right <?php if(is_page('counseling')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/counseling">無料カウンセリング</a></div>
+        </div>
         <button type="button" class="drawer-toggle drawer-hamburger tab-sp">
           <span class="sr-only">toggle navigation</span>
           <span class="drawer-hamburger-icon"></span>
         </button>
         <!-- ナビゲーションの中身 -->
         <nav class="drawer-nav tab-sp" role="navigation">
-            <h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/common/logoHead.svg" alt="ドガポンマーケティング大学校"></a></h1>
+            <h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/footer/logo.svg" alt="ドガポンマーケティング大学校"></a></h1>
           <ul class="drawer-menu">
-            <li id="doropmenu_1"><div class="menu_toggle <?php if(is_page('reason')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/reason" class="menu_sp">選ばれる理由</a><span class="toggle"></span></div>
-                <ul class="inner child">
-                    <li><a href="<?php echo home_url(); ?>/reason#knowhow">最先端の動画ノウハウ</a></li>
-                    <li><a href="<?php echo home_url(); ?>/reason#support">結果にフォーカスしたサポート</a></li>
-                    <li><a href="<?php echo home_url(); ?>/reason#professional">未経験から動画のプロへ</a></li>
-                </ul>
-            </li>
-              <li id="doropmenu_2"><div class="menu_toggle <?php if(is_page('curriculum')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/curriculum" class="menu_sp">カリキュラム</a><span class="toggle"></span></div>
-                <ul class="inner child">
-                    <li class="<?php if(is_page('price')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/curriculum/price">料金</a></li>
-                </ul>
-            </li>
-            <li class="menu_top <?php if(is_tag('voice')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/tag/voice">受講生インタビュー</a></li>
-            <li class="menu_top <?php if(is_page('limitedcontents')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/limitedcontents">限定コンテンツ</a></li>
-            <li class="menu_top <?php if(is_page('blog')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/blog">ドガポンブログ</a></li>
-            <li class="menu_top <?php if(is_post_type_archive('faq')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/faq" class="border-none">よくある質問</a></li>
+              <li class=" <?php if(is_page('curriculum')) : ?>active<?php endif; ?>"><a class="border-none"href="<?php echo home_url(); ?>/curriculum" class="menu_sp">カリキュラム</a><span class="toggle"></span></li>
+              <li class="as <?php if(is_page('price')) : ?>active<?php endif; ?>"><a class="as" href="<?php echo home_url(); ?>/curriculum/price">料金</a></li>
+              <li class="menu_top <?php if(is_tag('voice')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/tag/voice">受講生の声</a></li>
+              <li class="menu_top <?php if(is_post_type_archive('faq')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/faq" >よくある質問</a></li>
           </ul>
             <div class="btnCSL <?php if(is_page('counseling')) : ?>active<?php endif; ?>"><a href="<?php echo home_url(); ?>/counseling">無料カウンセリング</a></div>
         </nav>

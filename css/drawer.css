@@ -21,8 +21,14 @@
   overflow: scroll;
   width: 17.25rem;
   height: 100%;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(37,37,37,0.95);
     padding-bottom: 30px;
+}
+
+@media screen and (min-width:541px) {
+  .drawer-nav {
+    width: 34.25rem;
+  }
 }
 
 .drawer-brand {
@@ -66,7 +72,6 @@
   display: none;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .2);
 }
 
 .drawer-open .drawer-overlay {
@@ -122,14 +127,41 @@
 
 .drawer--right .drawer-nav {
   right: -17.25rem;
+  top: 62px;
   -webkit-transition: right .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
   transition: right .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+
+@media screen and (min-width:541px) {
+  .drawer--right .drawer-nav {
+    right: -34.25rem;
+    top: 80px;
+  }
 }
 
 .drawer--right.drawer-open .drawer-nav,
 .drawer--right .drawer-hamburger,
 .drawer--right.drawer-open .drawer-navbar .drawer-hamburger {
-  right: 0;
+  right: 0px;
+  top: 62px;
+}
+
+.drawer--right .drawer-hamburger{
+  right: 10px;
+  top: 5px;
+}
+
+@media screen and (min-width:541px) {
+  .drawer--right.drawer-open .drawer-nav,
+  .drawer--right .drawer-hamburger,
+  .drawer--right.drawer-open .drawer-navbar .drawer-hamburger {
+    right: 0px;
+    top: 80px;
+  }
+  .drawer--right .drawer-hamburger{
+    right: 30px;
+    top: 13px;
+  }
 }
 
 
@@ -140,14 +172,14 @@
 .drawer-hamburger {
   position: fixed;
   z-index: 104;
-  top: 10px;
+  top: 14px;
   display: block;
   box-sizing: content-box;
   width: 2rem;
   padding: 0;
   padding-top: 15px;
-  padding-right: .5rem;
-  padding-bottom: 30px;
+  padding-right: 0.7rem;
+  padding-bottom: 0px;
   padding-left: .5rem;
   -webkit-transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
   transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
@@ -157,10 +189,23 @@
   outline: 0;
   background-color: transparent;
 }
+@media screen and (max-width:599px) {
+  .drawer-hamburger {
+    top: 5px;
+  }
+}
 
 .drawer-hamburger:hover {
   cursor: pointer;
+  top: 4px;
+  right: 10px;
   background-color: transparent;
+}
+@media screen and (min-width:541px) {
+  .drawer-hamburger:hover {
+    top: 13px;
+    right: 30px;
+  }
 }
 
 .drawer-hamburger-icon {
@@ -177,9 +222,7 @@
   transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
   background-color: #fff;
 }
-.drawer-hamburger-icon{width: 70%; background: #a0a0a0;}
-.drawer-hamburger-icon:before{width: 130%;}
-.drawer-hamburger-icon:after{width: 100%;}
+.drawer-hamburger-icon{width: 34px; left: 0px; background: #464646;}
 
 .drawer-hamburger-icon:before,
 .drawer-hamburger-icon:after {
@@ -187,21 +230,60 @@
   top: -10px;
   content: ' ';
 }
-
-.drawer-hamburger-icon:before{left: -6px; background: #a0a0a0;}
-
-.drawer-hamburger-icon:after {
-  top: 10px;
-  left: 0px;
-  background: #a0a0a0;
+@media screen and (min-width:541px) {
+  .drawer-hamburger-icon:before,
+  .drawer-hamburger-icon:after {
+    top: -12px;
+  }
 }
 
-.drawer-open .drawer-hamburger-icon,
-.drawer-open .drawer-hamburger-icon:before,
+.drawer-hamburger-icon:before{left: 0px; width: 34px; height: 2px; background: #464646;}
+
+.drawer-hamburger-icon:after {
+  top: 12px;
+  left: 0px;
+  width: 34px;
+  height: 2px;
+  background: #464646;
+}
+
+@media screen and (max-width:599px) {
+  .drawer-hamburger-icon:before{left: 0px; width: 25px;}
+  .drawer-hamburger-icon {width: 25px;}
+  .drawer-hamburger-icon:after {width: 25px; top: 10px;}
+  .drawer-hamburger {
+    padding-right: 0.5rem;
+  }
+}
+
+.drawer-open .drawer-hamburger-icon{
+    -webkit-transform: rotate(42deg);
+          transform: rotate(42deg);
+    background-color: #464646;
+    width: 26px;
+    height: 3px;
+}
+
 .drawer-open .drawer-hamburger-icon:after{
-    -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-    background-color: #4D4D4D;
+    -webkit-transform: rotate(-88deg);
+          transform: rotate(-88deg);
+    background-color: #464646;
+    top: 0px;
+    height: 3px;
+    width: 26px;
+}
+
+@media screen and (min-width:541px) {
+  .drawer-open .drawer-hamburger-icon{
+    width: 36px;
+}
+.drawer-open .drawer-hamburger-icon:after{
+    width: 36px;
+}
+}
+
+.drawer-open .drawer-hamburger-icon:before {
+  display: none;
 }
 
 
