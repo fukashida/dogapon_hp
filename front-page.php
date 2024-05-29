@@ -176,26 +176,27 @@
           <div class="swiper-container post-slider">
             <div class="swiper-wrapper">
               <?php
-              $loop = new WP_Query(array(
-                'post_type' => 'post', // ポストタイプを設定 デフォルト投稿はそのまま
-              ));
+              $args = [
+                'post_type' => 'blog',//投稿タイプ名
+                'posts_per_page' => 6//6件表示
+                ];
+                $loop = new WP_Query(array(
+                  'posts_per_page' => 7,
+                ));
               ?>
               <?php
               /* Start the Loop */
               while ($loop->have_posts()) : $loop->the_post();
               ?>
-                <div class="swiper-slide">
-                      <?php if (has_post_thumbnail()) : ?>
-                        <figure class="post__thumb--img">
-                          <a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt=""></a>
-                        </figure>
-                      <?php elseif (!has_post_thumbnail()) : ?>
-                        <figure class="post__thumb--img">
-                          <!-- アイキャッチ画像がない場合  -->
-                          <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/top/no-imag.png" alt=""></a>
-                        </figure>
-                      <?php endif; ?>
-                </div>
+                <?php if(have_posts()): ?>
+                  <?php while(have_posts()):the_post(); ?>
+                    <div class="swiper-slide">
+                      <a href="<?php the_permalink();?>">
+                      <?php the_post_thumbnail( 'medium', array('class' => 'skip-lazy') ); ?>
+                      </a>
+                    </div>
+                  <?php endwhile; else: ?>
+                <?php endif; ?>
               <?php
               endwhile;
               wp_reset_query();
@@ -257,8 +258,8 @@ let mySwiper = new Swiper ('.toppage', {
         spaceBetween: 20,
       },
       1440: {
-        slidesPerView: 3,
-        spaceBetween: 150,
+        slidesPerView: 5,
+        spaceBetween: 30,
       },
       1921: {
         slidesPerView: 5,

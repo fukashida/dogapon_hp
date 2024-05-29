@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<div id="wrapFAQ" class="wrapMV">
-    <h2><img src="<?php echo get_template_directory_uri(); ?>/images/faq/txtMV.svg" alt="よくある質問"></h2>
+<div id="wrapFAQ">
+    <h2 class="title">よくある質問</h2>
     <div class="wrap1250 text-c">
         <form id="form" method="get" action="<?php echo home_url('/'); ?>" >
             <input id="sbox" name="s" type="text" placeholder="検索キーワードをご入力ください">

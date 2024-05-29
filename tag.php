@@ -5,6 +5,7 @@
     .drawer-hamburger-icon, .drawer-hamburger-icon:before, .drawer-hamburger-icon:after{background-color: #4d4d4d;}
 </style>
 
+<section>
 <div id="wrapBlog" class="wraplineBG tag">
 
     <div id="contBlog" class="archive flex flex-bw wrap1250">
@@ -12,10 +13,6 @@
               class="<?php $tag = get_queried_object(); echo $tag->slug ?>"
               >
             <section class="contBlog_temp">
-                <div class="flex flex-bw">
-                    <h2><?php single_tag_title(); ?></h2>
-                    <p class="btnMore"><a href="<?php echo home_url(); ?>/blog"><img src="<?php echo get_template_directory_uri(); ?>/images/blog/btnBack.svg" alt="トップに戻る"></a></p>
-                </div>
                 <div class="flex flex-bw wrapArticle">
 
                 <?php if(have_posts()): ?>
@@ -55,7 +52,7 @@
             </section>
             
             <div class="wrapPager flex">
-                <?php
+                <!-- <?php
                 if ($the_query->max_num_pages > 1) {
                     echo paginate_links(array(
                         'base' => get_pagenum_link(1) . '%_%',
@@ -66,7 +63,7 @@
                         'total' => $the_query->max_num_pages
                     ));
                 }
-                ?>
+                ?> -->
             </div>
             <?php wp_reset_query(); ?>
         </main>
@@ -98,6 +95,7 @@
         </div>
     </div>
 </div>
+</section>
 <?php get_footer(); ?>
 </body>  
 </html>
