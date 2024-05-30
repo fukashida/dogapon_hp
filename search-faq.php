@@ -1,16 +1,20 @@
 <?php get_header(); ?>
 
-<div id="wrapFAQ" class="wrapMV">
-    <h2><img src="<?php echo get_template_directory_uri(); ?>/images/faq/txtMV.svg" alt="よくある質問"></h2>
-    <div class="wrap1250 text-c">
-        <form id="form" method="get" action="<?php echo home_url('/'); ?>" >
-            <input id="sbox" name="s" type="text" placeholder="検索キーワードをご入力ください">
-            <input type="hidden" name="post_type" value="faq">
-            <input id="sbtn" type="image" src="<?php bloginfo('template_url'); ?>/images/common/search.svg">
-        </form>
-    </div>
-</div>
+<h2 class="title">よくある質問</h2>
 
+
+<section>
+    
+    <div id="wrapFAQ" class="wrapMV">
+        <div class="wrap1250 text-c">
+            <form id="form" method="get" action="<?php echo home_url('/'); ?>" >
+                <input id="sbox" name="s" type="text" placeholder="検索キーワードをご入力ください">
+                <input type="hidden" name="post_type" value="faq">
+                <input id="sbtn" type="image" src="<?php bloginfo('template_url'); ?>/images/common/search.svg">
+            </form>
+        </div>
+    </div>
+    
 <div id="contSRC">
     <style>
         .btnCS_hide{display: none;}
@@ -44,6 +48,8 @@
     </div>
     <p id="btnMore_SRC" class="text-c"><a href="<?php echo home_url(); ?>/faq">よくある質問トップにもどる</a></p>
 </div>
+
+</section>
 
 <?php get_footer(); ?>
 </body>  

@@ -158,7 +158,7 @@ if( !empty($_POST['btn_confirm']) ) {
     <!-- ここに問い合わせページが入る -->
 
     <section class="contact">
-        <h2>無料カウンセリング<br class="sp">お申込フォーム</h2>
+        <h2 class="title">無料カウンセリング<br class="sp">お申込フォーム</h2>
         <div class="container">
             <p>無料カウンセリングでは、当校カウンセラーより、あなたの活動に対するカウンセリングを行い、当校の説明も丁寧に行います。費用は一切かかりませんので、ご安心してお申し込みください。</p>
             <div class="box">
