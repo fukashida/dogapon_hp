@@ -227,7 +227,7 @@ header nav li.menu__single ul.menu__second-level {
 
 header nav li.menu__single ul.menu__second-level.price{
     width: 115px; 
-    right: 0px;
+    right: 10%;
     margin-top: 20px;
 }
 
