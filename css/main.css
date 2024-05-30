@@ -99,7 +99,7 @@
 #wrapPR2 .flex {justify-content: space-between;}
 #wrapPR2 h2{margin-bottom: 60px; position: relative;}
 #wrapPR2 h2::before{position: absolute; content: ""; width: 75px; height: 80px; top: -90px; left: 50%; transform: translateX(-50%); background: url(../images/top/wrapPR2_logo.svg)no-repeat center/100% ;}
-#wrapPR2 img{box-shadow:  3px 3px 6px rgba(0,0,0,0.16); border-radius: 0 20px 0 20px;}
+#wrapPR2 img{box-shadow:  3px 3px 6px rgba(0,0,0,0.16); border-radius: 0 40px 0 40px;}
 #wrapPR2 h3{font-size: 23px; margin-top: 25px; margin-bottom: 40px;}
 #wrapPR2 .course01,#wrapPR2 .course02 {width: 450px;}
 #wrapPR2 .course01 h3{color: #DF0017;}
