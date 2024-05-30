@@ -1,20 +1,22 @@
 <?php get_header(); ?>
+<h2 class="title">よくある質問</h2>
 
-<div id="wrapFAQ">
-    <h2 class="title">よくある質問</h2>
-    <div class="wrap1250 text-c">
-        <form id="form" method="get" action="<?php echo home_url('/'); ?>" >
-            <input id="sbox" name="s" type="text" placeholder="検索キーワードをご入力ください">
-            <input type="hidden" name="post_type" value="faq">
-            <input id="sbtn" type="image" src="<?php bloginfo('template_url'); ?>/images/common/search.svg">
-        </form>
+<section>
+
+    <div id="wrapFAQ">
+        <div class="wrap1250">
+            <form id="form" method="get" action="<?php echo home_url('/'); ?>" >
+                <input id="sbox" name="s" type="text" placeholder="検索キーワードをご入力ください">
+                <input type="hidden" name="post_type" value="faq">
+                <input id="sbtn" type="image" src="<?php bloginfo('template_url'); ?>/images/common/search.svg">
+            </form>
+        </div>
     </div>
-</div>
     
     <div id="wrapFAQ_tab">
         <div class="area wrap1250">
             <input type="radio" name="tab_name" id="tab1" checked>
-            <label class="tab_class" for="tab1" id="tab1_title">学校・受講<br class="sp">条件について</label>
+            <label class="tab_class" for="tab1" id="tab1_title">学校・<br class="sp">受講条件<br class="tb">について</label>
             <div id="tab1" class="content_class">
               <?php query_posts( array(
                     'post_type' => 'faq',
@@ -29,7 +31,9 @@
                 <?php while(have_posts()):the_post(); ?>
                 <details>
                   <summary><?php the_title(); ?></summary>
-                  <?php the_content(); ?>
+                  <div class="item">
+                    <?php the_content(); ?>
+                  </div>
                 </details>
                 <?php endwhile; else: ?>
                 <?php endif; ?>
@@ -50,7 +54,9 @@
                 <?php while(have_posts()):the_post(); ?>
                 <details>
                   <summary><?php the_title(); ?></summary>
-                  <?php the_content(); ?>
+                  <div class="item">
+                    <?php the_content(); ?>
+                  </div>
                 </details>
                 <?php endwhile; else: ?>
                 <?php endif; ?>
@@ -71,7 +77,9 @@
                 <?php while(have_posts()):the_post(); ?>
                 <details>
                   <summary><?php the_title(); ?></summary>
-                  <?php the_content(); ?>
+                  <div class="item">
+                    <?php the_content(); ?>
+                  </div>
                 </details>
                 <?php endwhile; else: ?>
                 <?php endif; ?>
@@ -92,7 +100,9 @@
                 <?php while(have_posts()):the_post(); ?>
                 <details>
                   <summary><?php the_title(); ?></summary>
-                  <?php the_content(); ?>
+                  <div class="item">
+                    <?php the_content(); ?>
+                  </div>
                 </details>
                 <?php endwhile; else: ?>
                 <?php endif; ?>
@@ -113,7 +123,9 @@
                 <?php while(have_posts()):the_post(); ?>
                 <details>
                   <summary><?php the_title(); ?></summary>
-                  <?php the_content(); ?>
+                  <div class="item">
+                    <?php the_content(); ?>
+                  </div>
                 </details>
                 <?php endwhile; else: ?>
                 <?php endif; ?>
@@ -122,6 +134,8 @@
       </div>
         
     </div>
+
+  </section>
 
 <?php get_footer(); ?>
 </body>  

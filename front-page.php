@@ -176,12 +176,8 @@
           <div class="swiper-container post-slider">
             <div class="swiper-wrapper">
               <?php
-              $args = [
-                'post_type' => 'blog',//投稿タイプ名
-                'posts_per_page' => 6//6件表示
-                ];
                 $loop = new WP_Query(array(
-                  'posts_per_page' => 7,
+                  'posts_per_page' => 1,
                 ));
               ?>
               <?php
@@ -236,6 +232,9 @@ let mySwiper = new Swiper ('.toppage', {
     slidesPerView: 3,
     spaceBetween: 30,
     loop: true,
+    autoplay: {
+        delay: 3000,
+    },
     pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -258,11 +257,8 @@ let mySwiper = new Swiper ('.toppage', {
         spaceBetween: 20,
       },
       1440: {
-        slidesPerView: 5,
+        slidesPerView: 4.2,
         spaceBetween: 30,
-      },
-      1921: {
-        slidesPerView: 5,
       },
     },
   })

@@ -28,7 +28,7 @@ Template Name: カリキュラムページ
                 編集ディレクターを目指すコース。<br>
                 動画編集やサムネイル等の制作スキルや、<br>
                 数字を伸ばすマーケティングも学べます。</p>
-                <a href="">コース詳細を見る</a>
+                <a href="<?php echo home_url(); ?>/course_director">コース詳細を見る</a>
             </div>
             <img class="pc" src="<?php echo get_template_directory_uri(); ?>/images/curriculum/director.png" akt="動画制作ディレクターコースの画像">
         </div>
@@ -43,7 +43,7 @@ Template Name: カリキュラムページ
                 YouTube運用代行ビジネスを学ぶコース。<br>
                 制作・マーケ・ディレクション・<br>
                 法人営業まで一気通貫で学べます。</p>
-                <a href="">コース詳細を見る</a>
+                <a href="<?php echo home_url(); ?>/course_business">コース詳細を見る</a>
             </div>
         </div>
     </div>
