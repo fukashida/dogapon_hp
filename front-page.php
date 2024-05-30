@@ -187,11 +187,9 @@
                 <?php if(have_posts()): ?>
                   <?php while(have_posts()):the_post(); ?>
                   <div class="swiper-slide">
-                      <figure>
                       <a href="<?php the_permalink();?>">
                       <?php the_post_thumbnail( 'medium', array('class' => 'skip-lazy') ); ?>
                       </a>
-                    </figure>
                   </div>
                   <?php endwhile; else: ?>
                 <?php endif; ?>
@@ -243,19 +241,15 @@ let mySwiper = new Swiper ('.toppage', {
     },
     breakpoints: {
       320: {
-        slidesPerView: 1.2,
-        spaceBetween: 10,
-      },
-      420: {
-        slidesPerView: 1.35,
-        spaceBetween: 10,
+        slidesPerView: 1.4,
+        spaceBetween: 15,
       },
       600: {
         slidesPerView: 1.4,
         spaceBetween: 10,
       },
       768: {
-        slidesPerView: 3,
+        slidesPerView: 2.5,
         spaceBetween: 20,
       },
       1440: {

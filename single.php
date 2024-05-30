@@ -15,7 +15,6 @@
     
             <div id="wrapTitle" class="flex flex-bw">
                     <h2 id="contTitle"><?php the_title(); ?></h2>
-                    <p class="btnMore"><a href="<?php echo home_url(); ?>/blog"><img src="<?php echo get_template_directory_uri(); ?>/images/blog/btnBacklatest.svg" alt="一覧に戻る"></a></p>
             </div>
             
             <div id="wrapDateTag" class="flex flex-bw">
@@ -34,15 +33,7 @@
             <div class="wrapBlogContent">
             <?php the_content(); ?>
                 
-            <div id="wrapSNS" class="flex">
-                <?php echo do_shortcode("[wp_ulike]"); ?>
-                <figure class="btnTw">
-                    <a href="https://twitter.com/share?url=<?php the_permalink();?>&text=<?php the_title(); ?>" rel="nofollow" target="_blank">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/blog/btnTw.svg"></a></figure>
-                <figure class="btnFb">
-                    <a href="http://www.facebook.com/share.php?u=<?php the_permalink();?>" rel="nofollow" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/blog/btnFb.svg"></a>
-                </figure>
-            </div>
+ 
                 
             </div>
     <?php
@@ -51,22 +42,12 @@
     ?>
 </main>
     
-<section id="wrapPR2">
-        <div id="contPR2" class="wrap1250">
-            <div id="contPR2_r">
-                <p class="sp"><img src="<?php echo get_template_directory_uri(); ?>/images/price/txt3.svg" alt="受講のお申し込みやお支払いの相談などは、無料カウンセリングで承っておりますのでお気軽にお申し込みください。"></p>
-                <p class="tab-pc">受講のお申し込みやお支払いの相談などは、<br>無料カウンセリングで承っておりますので<br>お気軽にお申し込みください。</p>
-                <div class="btnCS2"><a href="<?php echo home_url(); ?>/counseling">無料カウンセリングは<br class="sp">こちら</a></div>
-            </div>
-        </div>
-    </section>
     
 <div id="contBlog_bottom" class="wrap1250">    
 <?php if(has_tag()==true) : ?>        
      <section class="contBlog_temp tag">
                 <div class="flex flex-bw">
                     <h2>関連記事</h2>
-                    <p class="btnMore"><a href="<?php echo home_url(); ?>/blog/latest"><img src="<?php echo get_template_directory_uri(); ?>/images/blog/btnMore.svg" alt="もっとみる"></a></p>
                 </div>
                 <div class="flex wrapArticle">
                     <?php 
@@ -129,7 +110,6 @@
     <section class="contBlog_temp latest">
                 <div class="flex flex-bw">
                     <h2>最新記事</h2>
-                    <p class="btnMore"><a href="<?php echo home_url(); ?>/blog/latest"><img src="<?php echo get_template_directory_uri(); ?>/images/blog/btnMore.svg" alt="もっとみる"></a></p>
                 </div>
                 <div class="flex wrapArticle">
             <?php query_posts( array(
