@@ -28,9 +28,7 @@
         </div>
         <div class="wrap1250 flex footerIcon">
           <ul class="flex footerIcon">
-              <li><a href="https://twitter.com/dogaponkun" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/common/footer_icon1_on.svg"><img src="<?php echo get_template_directory_uri(); ?>/images/common/footer_icon1_of.svg"></a></li>
               <li><a href="https://twitter.com/dogaponsapuri" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/common/footer_icon2_on.svg"><img src="<?php echo get_template_directory_uri(); ?>/images/common/footer_icon2_of.svg"></a></li>
-              <li><a href="https://landing.lineml.jp/r/1654942304-oMXM9Bwg?lp=q8UXyc" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/common/footer_icon3_on.svg"><img src="<?php echo get_template_directory_uri(); ?>/images/common/footer_icon3_of.svg"></a></li>
           </ul>
           <div class="flex">
             <p class="tab-pc"><small>&copy;ドガポンマーケティング大学校. All Rights Reserved.</small></p>
