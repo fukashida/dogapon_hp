@@ -61,10 +61,10 @@ Template Name: カウンセリングページ
         <p class="title">申込みフォームに記載し、送信</p>
         <img src="<?php echo get_template_directory_uri(); ?>/images/counseling/step2.png" class="" alt="申込みフォームに記載し、送信の画像">
         <img class="step" src="<?php echo get_template_directory_uri(); ?>/images/counseling/step3.svg" class="" alt="STEP03">
-        <p class="title">申込みフォームにてお申し込み完了後、<br class="sp">メールにて日程確定の案内と当日用の<br class="sp">Zoomリンクをお送りします</p>
+        <p class="title">申込みフォームにてお申し込み完了後、<br class="tb">メールにて日程確定の案内と当日用の<br class="tb">Zoomリンクをお送りします</p>
         <img class="base" src="<?php echo get_template_directory_uri(); ?>/images/counseling/step3.png" class="" alt="申込みフォームにてお申し込み完了後の画像">
         <img class="step" src="<?php echo get_template_directory_uri(); ?>/images/counseling/step4.svg" class="" alt="STEP04">
-        <p class="title">当日、Zoomにて<br class="sp">カウンセリングが受けられます！<br class="sp">Zoomアカウントをお持ちでない方でも<br class="sp">簡単にご参加可能です！</p>
+        <p class="title">当日、Zoomにて<br class="sp">カウンセリングが受けられます！<br class="tb">Zoomアカウントをお持ちでない方でも<br class="tb">簡単にご参加可能です！</p>
         <img class="base" style="margin-bottom:0;" src="<?php echo get_template_directory_uri(); ?>/images/counseling/step4.png" class="" alt="Zoomにてカウンセリングの画像">
     </section>
     
