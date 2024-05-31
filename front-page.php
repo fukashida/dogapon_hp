@@ -164,7 +164,7 @@
         <img src="<?php echo get_template_directory_uri(); ?>/images/top/liart_logo.svg" alt="現場の第一線で活躍する現役プロが講師を務めるの画像">
         <p>誰かの活躍をエンパワーメントする集団として<br>
           各分野でのコンテンツ発信文化を牽引する</p>
-          <a href="https://liartpromotion.co.jp/">ライアートプロモーションHPはこちら</a>
+          <a target=”_blank” href="https://liartpromotion.co.jp/">ライアートプロモーションHPはこちら</a>
       </div>
   </section>
 
@@ -252,7 +252,7 @@ let mySwiper = new Swiper ('.toppage', {
         slidesPerView: 2.5,
         spaceBetween: 20,
       },
-      1440: {
+      1350: {
         slidesPerView: 4.2,
         spaceBetween: 30,
       },

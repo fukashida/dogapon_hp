@@ -148,7 +148,7 @@
             </div>
     </section>
 
-<?php get_footer(); ?>
+<?php get_footer(2); ?>
 
 </body>  
 </html>
