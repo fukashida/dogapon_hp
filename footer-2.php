@@ -27,9 +27,6 @@
             </nav>
         </div>
         <div class="wrap1250 flex footerIcon">
-          <ul class="flex footerIcon">
-              <li><a href="https://twitter.com/dogaponsapuri" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/common/footer_icon2_on.svg"><img src="<?php echo get_template_directory_uri(); ?>/images/common/footer_icon2_of.svg"></a></li>
-          </ul>
           <div class="flex">
             <p class="tab-pc"><small>&copy;ドガポンマーケティング大学校. All Rights Reserved.</small></p>
             <p class="tab-pc"><a href="<?php echo home_url(); ?>/privacy" class="<?php if(is_page('privacy')) : ?>active2<?php endif; ?>">プライバシーポリシー</a><a href="<?php echo home_url(); ?>/transaction" class="<?php if(is_page('transaction')) : ?>active2<?php endif; ?>">特定商取引法について</a></p>

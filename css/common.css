@@ -535,7 +535,7 @@ body.is-modal{ height: 100vh; overflow: hidden;}
 
 
 .footerIcon{justify-content:center; flex-wrap: wrap;}
-footer .wrap1250{ max-width: 720px; padding-top: 0px; gap: 20px; width: 100%;}
+footer .wrap1250{ max-width: 720px; padding-top: 10px; gap: 20px; width: 100%;}
 footer p{text-align: center; padding-right: 20px;}
 footer p a{padding-right: 20px;}
 footer .footerMenu{flex-direction: column;}

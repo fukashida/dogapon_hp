@@ -15,33 +15,6 @@ if( !empty($_POST) ) {
 	}
 }
 
-session_start();
-if( !empty($_SESSION['page']) && $_SESSION['page'] === true ) {
-
-    // セッションの削除
-    unset($_SESSION['page']);
-
-if(count($_POST)){
-    $url = 'https://script.google.com/macros/s/AKfycbzKY72h3pK5GhTr-EH2rEozojY2V-46qcfj0mF38hkPc49I8BjDJtcxtrLi1fFPkKBR/exec';
-    $data = array(
-        'your_name' => $_POST['your_name'],
-        'email' => $_POST['email'],
-        'datetime_local01' => $_POST['datetime_local01'],
-        'datetime_local02' => $_POST['datetime_local02'],
-        'message' => $_POST['message'],
-    );
-    $context = array(
-        'http' => array(
-            'method'  => 'POST',
-            'header'  => implode("\r\n", array('Content-Type: application/x-www-form-urlencoded',)),
-            'content' => http_build_query($data)
-        )
-    );
-    $response_json = file_get_contents($url, false, stream_context_create($context));
-    $response_data = json_decode($response_json);
-    var_dump($response_data);
-}
-
 // 変数とタイムゾーンを初期化
 $header = null;
 $auto_reply_subject = null;
@@ -75,6 +48,35 @@ $admin_reply_text .= "このメールは ドガポン (https://dogapon.com/) の
 
 // 運営側へメール送信
 mb_send_mail( 'support@dogapon.com', $admin_reply_subject, $admin_reply_text, $header);
+
+
+session_start();
+if( !empty($_SESSION['page']) && $_SESSION['page'] === true ) {
+
+
+    // セッションの削除
+    unset($_SESSION['page']);
+
+if(count($_POST)){
+    $url = 'https://script.google.com/macros/s/AKfycbzKY72h3pK5GhTr-EH2rEozojY2V-46qcfj0mF38hkPc49I8BjDJtcxtrLi1fFPkKBR/exec';
+    $data = array(
+        'your_name' => $_POST['your_name'],
+        'email' => $_POST['email'],
+        'datetime_local01' => $_POST['datetime_local01'],
+        'datetime_local02' => $_POST['datetime_local02'],
+        'message' => $_POST['message'],
+    );
+    $context = array(
+        'http' => array(
+            'method'  => 'POST',
+            'header'  => implode("\r\n", array('Content-Type: application/x-www-form-urlencoded',)),
+            'content' => http_build_query($data)
+        )
+    );
+    $response_json = file_get_contents($url, false, stream_context_create($context));
+    $response_data = json_decode($response_json);
+    var_dump($response_data);
+}
 
 
 } else {
