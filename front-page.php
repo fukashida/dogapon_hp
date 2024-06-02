@@ -146,10 +146,10 @@
                   <div class="box">
                       <p>運用YouTube累計</p>
                       <img src="<?php echo get_template_directory_uri(); ?>/images/top/liart02.svg" alt="500,000,000">
-                      <p>以上の登録獲得数</p>
+                      <p>以上の獲得再生数</p>
                   </div>
                   <div class="box b2">
-                      <p>運運用代行やPRなど</p>
+                      <p>運用代行やPRなど</p>
                       <img src="<?php echo get_template_directory_uri(); ?>/images/top/liart03.svg" alt="350">
                       <p>以上の取引社数</p>
                   </div>
