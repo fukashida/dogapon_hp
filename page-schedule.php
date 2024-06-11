@@ -37,7 +37,7 @@ if( !empty($_POST['btn_confirm']) ) {
         $error_message = array();
 
         // いずれかが埋まっていない時
-        if( empty($data['your_name'] ||  $data['email'] || $data['datetime_local01'] || $data['datetime_local02'] || ($data['message']) ) ) {
+        if( empty($data['your_name'] ||  $data['email'] || $data['datetime_local01'] || $data['datetime_local02'] || $data['stage'] || $data['message'] ) ) {
             $error_message[5] = "入力内容に問題があります。\n\n\n確認して再度お試しください。";
         } elseif(!filter_var($data['email'], FILTER_VALIDATE_EMAIL)){
             $error_message[5] = "入力内容に問題があります。\n\n\n確認して再度お試しください。";
@@ -64,12 +64,17 @@ if( !empty($_POST['btn_confirm']) ) {
         if( empty($data['datetime_local02']) ) {
             $error_message[3] = "必須項目に入力してください。";
         }
-
+        
         // 問い合わせ内容のバリデーション
         if( empty($data['message']) ) {
             $error_message[4] = "必須項目に入力してください。";
         }
-    
+        
+        // ご検討段階のバリデーション
+        if( empty($data['stage']) ) {
+            $error_message[6] = "必須項目に入力してください。";
+        }
+
         return $error_message;
     } 
     
@@ -123,6 +128,14 @@ if( !empty($_POST['btn_confirm']) ) {
                                 </div>
                                 <div class="flex">
                                     <div class="flex-item">
+                                        <p class="text-bold">ご検討段階について</p>
+                                    </div>
+                                    <div class="flex-item">
+                                        <p><?php echo $_POST['stage']; ?></p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex-item">
                                         <p class="text-bold">ご相談内容</p>
                                     </div>
                                     <div class="flex-item">
@@ -139,6 +152,7 @@ if( !empty($_POST['btn_confirm']) ) {
                                     <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
                                     <input type="hidden" name="datetime_local01" value="<?php echo $_POST['datetime_local01']; ?>">
                                     <input type="hidden" name="datetime_local02" value="<?php echo $_POST['datetime_local02']; ?>">
+                                    <input type="hidden" name="stage" value="<?php echo $_POST['stage']; ?>">
                                     <input type="hidden" name="message" value="<?php echo $_POST['message']; ?>">
                             </div>
                         </div>
@@ -238,6 +252,26 @@ if( !empty($_POST['btn_confirm']) ) {
                             <?php endif;?>
                         </div>
 
+                        <div class="flex-item">
+                            <label for="">ご検討段階について</label>
+                            <select class="select stage" name="stage">
+                                <option vallue="選択" <?php if( !empty($_POST['stage']) ){ echo ''; } ?> disabled selected>選択</option>
+                                <option value="動画制作ディレクターコースに興味がある" <?php if( !empty($_POST['stage']) && $_POST['stage'] === "動画制作ディレクターコースに興味がある" ){ echo 'selected'; } ?>>動画制作ディレクターコースに興味がある</option>
+                                <option value="YouTube運用代行ビジネスコースに興味がある" <?php if( !empty($_POST['stage']) && $_POST['stage'] === "YouTube運用代行ビジネスコースに興味がある" ){ echo 'selected'; } ?>>YouTube運用代行ビジネスコースに興味がある</option>
+                                <option value="どちらのコースも興味がある" <?php if( !empty($_POST['stage']) && $_POST['stage'] === "どちらのコースも興味がある" ){ echo 'selected'; } ?>>どちらのコースも興味がある</option>
+                                <option value="わからない（適正を聞きたい等）" <?php if( !empty($_POST['stage']) && $_POST['stage'] === "わからない（適正を聞きたい等）" ){ echo 'selected'; } ?>>わからない（適正を聞きたい等）</option>
+                                <option value="まだ情報収集段階で何とも言えない" <?php if( !empty($_POST['stage']) && $_POST['stage'] === "まだ情報収集段階で何とも言えない" ){ echo 'selected'; } ?>>まだ情報収集段階で何とも言えない</option>
+                            </select>
+                            <?php if(!empty($error_message[6])):?>
+                                <style>
+                                    .form-area.stage {
+                                        border: solid 1px #F5CF00;
+                                    }
+                                </style>
+                                <p class="error_msg"><?php echo $error_message[6];?></p>
+                            <?php endif;?>
+                        </div>
+
                         <div class="contact-detail">
                             <label for="">ご相談内容</label>
                             <p>
@@ -267,4 +301,12 @@ if( !empty($_POST['btn_confirm']) ) {
 
     <?php endif; ?>
 
-    <?php get_footer(); ?>
+<script>
+        // セレクトボタン
+    $(document).ready(function() {
+    $('.select').select2();
+    });
+</script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/select2.min.js"></script>
+<?php get_footer(); ?>

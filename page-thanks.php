@@ -25,8 +25,8 @@ date_default_timezone_set('Asia/Tokyo');
 
 // ヘッダー情報を設定
 $header = "MIME-Version: 1.0\n";
-$header .= "From: ドガポン <support@dogapon.com>\n";
-$header .= "Reply-To: ドガポン <support@dogapon.com>\n";
+$header .= "From: ドガポン <info@academydpm.com>\n";
+$header .= "Reply-To: ドガポン <info@academydpm.com>\n";
 
 // 運営側へ送るメールの件名
 $admin_reply_subject = "ドガポン無料カウンセリングへのお問い合わせがありました。";
@@ -39,6 +39,7 @@ $admin_reply_text .= "名前：" . $_POST['your_name'] . "\n";
 $admin_reply_text .= "メールアドレス：" . $_POST['email'] . "\n";
 $admin_reply_text .= "第一希望日程 時間：" . $_POST['datetime_local01'] . "\n";
 $admin_reply_text .= "第二希望日程 時間：" . $_POST['datetime_local02'] . "\n";
+$admin_reply_text .= "ご検討段階について：" . $_POST['stage'] . "\n";
 $admin_reply_text .= "\n";
 $admin_reply_text .= "ご相談内容：" . $_POST['message'] . "\n\n";
 $admin_reply_text .= "--\n\n";
@@ -47,7 +48,7 @@ $admin_reply_text .= "https://docs.google.com/spreadsheets/d/1YLyV22yUHG3juhbIXd
 $admin_reply_text .= "このメールは ドガポン (https://dogapon.com/) の無料カウンセリングフォームから送信されました\n";
 
 // 運営側へメール送信
-mb_send_mail( 'support@dogapon.com', $admin_reply_subject, $admin_reply_text, $header);
+mb_send_mail( 'info@academydpm.com', $admin_reply_subject, $admin_reply_text, $header);
 
 
 session_start();
@@ -58,12 +59,13 @@ if( !empty($_SESSION['page']) && $_SESSION['page'] === true ) {
     unset($_SESSION['page']);
 
 if(count($_POST)){
-    $url = 'https://script.google.com/macros/s/AKfycbzKY72h3pK5GhTr-EH2rEozojY2V-46qcfj0mF38hkPc49I8BjDJtcxtrLi1fFPkKBR/exec';
+    $url = 'https://script.google.com/macros/s/AKfycbxk9i_kGXoJkaNv8VVtbv6Nz9K62YGFC50XbLUagt_beYessf9jJOETLlhtPP-gPfep/exec';
     $data = array(
         'your_name' => $_POST['your_name'],
         'email' => $_POST['email'],
         'datetime_local01' => $_POST['datetime_local01'],
         'datetime_local02' => $_POST['datetime_local02'],
+        'stage' => $_POST['stage'],
         'message' => $_POST['message'],
     );
     $context = array(
