@@ -23,6 +23,9 @@ $admin_reply_subject = null;
 $admin_reply_text = null;
 date_default_timezone_set('Asia/Tokyo');
 
+// 宛先 ※同時に指定
+$to = "info@academydpm.com,m-obata@liartpromotion.com";
+
 // ヘッダー情報を設定
 $header = "MIME-Version: 1.0\n";
 $header .= "From: ドガポン <info@academydpm.com>\n";
@@ -48,15 +51,14 @@ $admin_reply_text .= "https://docs.google.com/spreadsheets/d/1YLyV22yUHG3juhbIXd
 $admin_reply_text .= "このメールは ドガポン (https://dogapon.com/) の無料カウンセリングフォームから送信されました\n";
 
 // 運営側へメール送信
-mb_send_mail( 'info@academydpm.com', $admin_reply_subject, $admin_reply_text, $header);
+mb_send_mail( $to , $admin_reply_subject, $admin_reply_text, $header);
 
+// セッションの削除
+unset($_SESSION['page']);
 
 session_start();
 if( !empty($_SESSION['page']) && $_SESSION['page'] === true ) {
 
-
-    // セッションの削除
-    unset($_SESSION['page']);
 
 if(count($_POST)){
     $url = 'https://script.google.com/macros/s/AKfycbxk9i_kGXoJkaNv8VVtbv6Nz9K62YGFC50XbLUagt_beYessf9jJOETLlhtPP-gPfep/exec';
