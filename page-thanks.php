@@ -103,5 +103,15 @@ if(count($_POST)){
     </div>
 </section>
 <script type="text/javascript" src="https://js.felmat.net/fmcv.js?adid=X9807N&uqid=<?php echo $_POST['email']; ?>"></script>
+<script>
+(function acsTrack(){
+var PV = "phr4yzy4oltl";
+var _ARGSV = <?php echo $_POST['email']; ?>;
+var KEYS = {cid : ["CL_", "ACT_", "cid_auth_get_type"], plid : ["PL_", "APT_", "plid_auth_get_type"]};
+var turl = "https://s8affi.net/track.php?p=" + PV + "&args=" + _ARGSV;
+var cks = document.cookie.split("; ").reduce(function(ret, s){ var kv = s.split("="); if(kv[0] && kv[1]) ret[kv[0]] = kv[1]; return ret; }, []);
+turl = Object.keys(KEYS).reduce(function(url, k){ var vk = KEYS[k][0] + PV; var tk = KEYS[k][1] + PV; var v = "", t = ""; if(cks[vk]){ v = cks[vk]; if(cks[tk]) t = cks[tk]; }else if(localStorage.getItem(vk)){ v = localStorage.getItem(vk); t = "ls"; } if(v) url += "&" + k + "=" + v; if(t) url += "&" + KEYS[k][2] + "=" + t; return url; }, turl);
+var xhr = new XMLHttpRequest(); xhr.open("GET", turl); xhr.send(); })();
+</script>
 
 <?php get_footer(); ?>
