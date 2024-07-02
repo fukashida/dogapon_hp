@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(2); ?>
 
 <style>
     .drawer-hamburger-icon, .drawer-hamburger-icon:before, .drawer-hamburger-icon:after{background-color: #4d4d4d;}

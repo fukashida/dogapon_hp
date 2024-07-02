@@ -106,7 +106,7 @@ if(count($_POST)){
 <script>
 (function acsTrack(){
 var PV = "phr4yzy4oltl";
-var _ARGSV = <?php echo $_POST['email']; ?>;
+var _ARGSV = <?php echo date("Y-m-d H:i"); ?>;
 var KEYS = {cid : ["CL_", "ACT_", "cid_auth_get_type"], plid : ["PL_", "APT_", "plid_auth_get_type"]};
 var turl = "https://s8affi.net/track.php?p=" + PV + "&args=" + _ARGSV;
 var cks = document.cookie.split("; ").reduce(function(ret, s){ var kv = s.split("="); if(kv[0] && kv[1]) ret[kv[0]] = kv[1]; return ret; }, []);
@@ -115,3 +115,6 @@ var xhr = new XMLHttpRequest(); xhr.open("GET", turl); xhr.send(); })();
 </script>
 
 <?php get_footer(); ?>
+
+</body>  
+</html>
