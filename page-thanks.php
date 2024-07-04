@@ -115,6 +115,41 @@ var cks = document.cookie.split("; ").reduce(function(ret, s){ var kv = s.split(
 turl = Object.keys(KEYS).reduce(function(url, k){ var vk = KEYS[k][0] + PV; var tk = KEYS[k][1] + PV; var v = "", t = ""; if(cks[vk]){ v = cks[vk]; if(cks[tk]) t = cks[tk]; }else if(localStorage.getItem(vk)){ v = localStorage.getItem(vk); t = "ls"; } if(v) url += "&" + k + "=" + v; if(t) url += "&" + KEYS[k][2] + "=" + t; return url; }, turl);
 var xhr = new XMLHttpRequest(); xhr.open("GET", turl); xhr.send(); })();
 </script>
+<script type="text/javascript">
+(function(){
+function loadScriptRTCV(callback){
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = 'https://www.rentracks.jp/js/itp/rt.track.js?t=' + (new Date()).getTime();
+if ( script.readyState ) {
+script.onreadystatechange = function() {
+if ( script.readyState === 'loaded' || script.readyState === 'complete' ) {
+script.onreadystatechange = null;
+callback();
+};
+};
+} else {
+script.onload = function() {
+callback();
+};
+};
+document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+loadScriptRTCV(function(){
+_rt.sid = 9284;
+_rt.pid = 13194;
+_rt.price = 0;
+_rt.reward = -1;
+_rt.cname = '';
+_rt.ctel = '';
+_rt.cemail = '';
+_rt.cinfo = '<?php echo $_POST['email']; ?>';
+rt_tracktag();
+});
+}(function(){}));
+</script>
+  
 
 <?php get_footer(); ?>
 
