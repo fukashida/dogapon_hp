@@ -38,6 +38,7 @@ $admin_reply_subject = "ドガポン無料カウンセリングへのお問い�
 $admin_reply_text = "\n";
 $admin_reply_text .= "以下の内容でWEBサイトへのお問い合わせがありました。\n";
 $admin_reply_text .= "お問い合わせ日時：" . date("Y-m-d H:i") . "\n\n";
+$admin_reply_text .= "お申込み番号：" . $_POST['application_number'] . "\n\n";
 $admin_reply_text .= "名前：" . $_POST['your_name'] . "\n";
 $admin_reply_text .= "メールアドレス：" . $_POST['email'] . "\n";
 $admin_reply_text .= "第一希望日程 時間：" . $_POST['datetime_local01'] . "\n";
@@ -63,6 +64,7 @@ if( !empty($_SESSION['page']) && $_SESSION['page'] === true ) {
 if(count($_POST)){
     $url = 'https://script.google.com/macros/s/AKfycbxk9i_kGXoJkaNv8VVtbv6Nz9K62YGFC50XbLUagt_beYessf9jJOETLlhtPP-gPfep/exec';
     $data = array(
+        'application_number' => $_POST['application_number'],
         'your_name' => $_POST['your_name'],
         'email' => $_POST['email'],
         'datetime_local01' => $_POST['datetime_local01'],
@@ -103,6 +105,8 @@ if(count($_POST)){
     </div>
 </section>
 <script type="text/javascript" src="https://js.felmat.net/fmcv.js?adid=X9807N&uqid=<?php echo $_POST['email']; ?>"></script>
+
+
 <script>
 (function acsTrack(){
 var PV = "phr4yzy4oltl";
@@ -115,6 +119,8 @@ var cks = document.cookie.split("; ").reduce(function(ret, s){ var kv = s.split(
 turl = Object.keys(KEYS).reduce(function(url, k){ var vk = KEYS[k][0] + PV; var tk = KEYS[k][1] + PV; var v = "", t = ""; if(cks[vk]){ v = cks[vk]; if(cks[tk]) t = cks[tk]; }else if(localStorage.getItem(vk)){ v = localStorage.getItem(vk); t = "ls"; } if(v) url += "&" + k + "=" + v; if(t) url += "&" + KEYS[k][2] + "=" + t; return url; }, turl);
 var xhr = new XMLHttpRequest(); xhr.open("GET", turl); xhr.send(); })();
 </script>
+
+
 <script type="text/javascript">
 (function(){
 function loadScriptRTCV(callback){
@@ -144,7 +150,7 @@ _rt.reward = -1;
 _rt.cname = '';
 _rt.ctel = '';
 _rt.cemail = '';
-_rt.cinfo = '<?php echo $_POST['email']; ?>';
+_rt.cinfo = '<?php echo $_POST['application_number']; ?>';
 rt_tracktag();
 });
 }(function(){}));
