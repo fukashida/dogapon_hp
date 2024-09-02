@@ -77,6 +77,15 @@ if( !empty($_POST['btn_confirm']) ) {
 
         return $error_message;
     } 
+
+    // セッションにお申込み番号が存在しない場合、新しい番号を生成
+    if (!isset($_SESSION['application_number'])) {
+        // お申込み番号を生成（例: 現在のタイムスタンプを使用）
+        $_SESSION['application_number'] = time();
+    }
+
+    // お申込み番号を変数に格納
+    $application_number = $_SESSION['application_number'];
     
 ?>
 </div>
@@ -142,6 +151,9 @@ if( !empty($_POST['btn_confirm']) ) {
                                         <p id="message"><?php echo nl2br($_POST['message']); ?></p>
                                     </div>
                                 </div>
+                                <div style="display:none">
+                                    <?php echo nl2br($_POST['application_number']); ?>
+                                </div>
                                 <div class="button-content">
                                     <div class="flex confirm-button">
                                             <input class="btn_back" type="button" name="btn_back" value="入力画面に戻る" onclick="history.back()">
@@ -154,6 +166,7 @@ if( !empty($_POST['btn_confirm']) ) {
                                     <input type="hidden" name="datetime_local02" value="<?php echo $_POST['datetime_local02']; ?>">
                                     <input type="hidden" name="stage" value="<?php echo $_POST['stage']; ?>">
                                     <input type="hidden" name="message" value="<?php echo $_POST['message']; ?>">
+                                    <input type="hidden" name="application_number" value="<?php echo $_POST['application_number']?>">
                             </div>
                         </div>
                     </div>
@@ -286,6 +299,9 @@ if( !empty($_POST['btn_confirm']) ) {
                                 <p class="error_msg error_contact"><?php echo $error_message[4];?></p>
                             <?php endif;?>
                         </div>
+
+                         <!-- お申込み番号をフォームに隠しフィールドとして追加 -->
+                        <input type="hidden" name="application_number" value="<?php echo $application_number; ?>">
 
                 </div>
                 <div class="submit_area">

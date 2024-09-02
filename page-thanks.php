@@ -24,7 +24,7 @@ $admin_reply_text = null;
 date_default_timezone_set('Asia/Tokyo');
 
 // 宛先 ※同時に指定
-$to = "info@academydpm.com,m-obata@liartpromotion.com";
+$to = "info@academydpm.com,m-obata@liartpromotion.com,info@typesinc.com";
 
 // ヘッダー情報を設定
 $header = "MIME-Version: 1.0\n";
@@ -38,6 +38,7 @@ $admin_reply_subject = "ドガポン無料カウンセリングへのお問い�
 $admin_reply_text = "\n";
 $admin_reply_text .= "以下の内容でWEBサイトへのお問い合わせがありました。\n";
 $admin_reply_text .= "お問い合わせ日時：" . date("Y-m-d H:i") . "\n\n";
+$admin_reply_text .= "お申込み番号：" . $_POST['application_number'] . "\n\n";
 $admin_reply_text .= "名前：" . $_POST['your_name'] . "\n";
 $admin_reply_text .= "メールアドレス：" . $_POST['email'] . "\n";
 $admin_reply_text .= "第一希望日程 時間：" . $_POST['datetime_local01'] . "\n";
@@ -63,6 +64,7 @@ if( !empty($_SESSION['page']) && $_SESSION['page'] === true ) {
 if(count($_POST)){
     $url = 'https://script.google.com/macros/s/AKfycbxk9i_kGXoJkaNv8VVtbv6Nz9K62YGFC50XbLUagt_beYessf9jJOETLlhtPP-gPfep/exec';
     $data = array(
+        'application_number' => $_POST['application_number'],
         'your_name' => $_POST['your_name'],
         'email' => $_POST['email'],
         'datetime_local01' => $_POST['datetime_local01'],
@@ -104,4 +106,58 @@ if(count($_POST)){
 </section>
 <script type="text/javascript" src="https://js.felmat.net/fmcv.js?adid=X9807N&uqid=<?php echo $_POST['email']; ?>"></script>
 
+
+<script>
+(function acsTrack(){
+var PV = "phr4yzy4oltl";
+var date = new Date();
+var order_id = date.getFullYear() +''+ (date.getMonth()+1) +''+ date.getDate() +''+ date.getHours() +''+ date.getMinutes() +''+ date.getSeconds();
+var _ARGSV = order_id;
+var KEYS = {cid : ["CL_", "ACT_", "cid_auth_get_type"], plid : ["PL_", "APT_", "plid_auth_get_type"]};
+var turl = "https://s8affi.net/track.php?p=" + PV + "&args=" + _ARGSV;
+var cks = document.cookie.split("; ").reduce(function(ret, s){ var kv = s.split("="); if(kv[0] && kv[1]) ret[kv[0]] = kv[1]; return ret; }, []);
+turl = Object.keys(KEYS).reduce(function(url, k){ var vk = KEYS[k][0] + PV; var tk = KEYS[k][1] + PV; var v = "", t = ""; if(cks[vk]){ v = cks[vk]; if(cks[tk]) t = cks[tk]; }else if(localStorage.getItem(vk)){ v = localStorage.getItem(vk); t = "ls"; } if(v) url += "&" + k + "=" + v; if(t) url += "&" + KEYS[k][2] + "=" + t; return url; }, turl);
+var xhr = new XMLHttpRequest(); xhr.open("GET", turl); xhr.send(); })();
+</script>
+
+
+<script type="text/javascript">
+(function(){
+function loadScriptRTCV(callback){
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = 'https://www.rentracks.jp/js/itp/rt.track.js?t=' + (new Date()).getTime();
+if ( script.readyState ) {
+script.onreadystatechange = function() {
+if ( script.readyState === 'loaded' || script.readyState === 'complete' ) {
+script.onreadystatechange = null;
+callback();
+};
+};
+} else {
+script.onload = function() {
+callback();
+};
+};
+document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+loadScriptRTCV(function(){
+_rt.sid = 9284;
+_rt.pid = 13194;
+_rt.price = 0;
+_rt.reward = -1;
+_rt.cname = '';
+_rt.ctel = '';
+_rt.cemail = '';
+_rt.cinfo = '<?php echo $_POST['application_number']; ?>';
+rt_tracktag();
+});
+}(function(){}));
+</script>
+  
+
 <?php get_footer(); ?>
+
+</body>  
+</html>
