@@ -33,50 +33,69 @@ if( !empty($_POST['btn_confirm']) ) {
     }
 
     function validation($data) {
-
         $error_message = array();
-
-        // いずれかが埋まっていない時
-        if( empty($data['your_name'] ||  $data['email'] || $data['datetime_local01'] || $data['datetime_local02'] || $data['stage'] || $data['message'] ) ) {
+    
+        // 全ての必須項目が埋まっているかチェック
+        if (empty($data['your_name']) || empty($data['email']) || empty($data['datetime_local01']) || empty($data['datetime_local02']) || empty($data['stage']) || empty($data['message']) || empty($data['experience']) || empty($data['joined']) || empty($data['goals'])) {
             $error_message[5] = "入力内容に問題があります。\n\n\n確認して再度お試しください。";
-        } elseif(!filter_var($data['email'], FILTER_VALIDATE_EMAIL)){
+        } elseif (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
             $error_message[5] = "入力内容に問題があります。\n\n\n確認して再度お試しください。";
-        } 
-
+        }
+    
         // 名前のバリデーション
-        if( empty($data['your_name']) ) {
+        if (empty($data['your_name'])) {
             $error_message[0] = "必須項目に入力してください。";
         }
-
+    
         // メールアドレスのバリデーション
-        if( empty($data['email']) ) {
+        if (empty($data['email'])) {
             $error_message[1] = "必須項目に入力してください。";
-        } elseif(!filter_var($data['email'], FILTER_VALIDATE_EMAIL)){
+        } elseif (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
             $error_message[1] = "正しいメールアドレスを入力してください。";
-        } 
-
+        }
+    
         // 第一希望日程のバリデーション
-        if( empty($data['datetime_local01']) ) {
+        if (empty($data['datetime_local01'])) {
             $error_message[2] = "必須項目に入力してください。";
         }
-
+    
         // 第二希望日程 のバリデーション
-        if( empty($data['datetime_local02']) ) {
+        if (empty($data['datetime_local02'])) {
             $error_message[3] = "必須項目に入力してください。";
         }
-        
+    
         // 問い合わせ内容のバリデーション
-        if( empty($data['message']) ) {
+        if (empty($data['message'])) {
             $error_message[4] = "必須項目に入力してください。";
         }
-        
+    
         // ご検討段階のバリデーション
-        if( empty($data['stage']) ) {
+        if (empty($data['stage'])) {
             $error_message[6] = "必須項目に入力してください。";
         }
-
+    
+        // 動画編集経験のバリデーション
+        if (empty($data['experience'])) {
+            $error_message[7] = "必須項目に入力してください。";
+        }
+    
+        // 動画編集案件のバリデーション (全くの未経験でない場合)
+        if (!empty($data['experience']) && $data['experience'] !== "全くの未経験" && empty($data['project'])) {
+            $error_message[8] = "必須項目に入力してください。";
+        }
+    
+        // 動画スクールに入ったのバリデーション
+        if (empty($data['joined'])) {
+            $error_message[9] = "必須項目に入力してください。";
+        }
+    
+        // 学んだ後の目標のバリデーション
+        if (empty($data['goals'])) {
+            $error_message[10] = "必須項目に入力してください。";
+        }
+    
         return $error_message;
-    } 
+    }    
 
     // セッションにお申込み番号が存在しない場合、新しい番号を生成
     if (!isset($_SESSION['application_number'])) {
@@ -145,6 +164,40 @@ if( !empty($_POST['btn_confirm']) ) {
                                 </div>
                                 <div class="flex">
                                     <div class="flex-item">
+                                        <p class="text-bold">動画編集経験</p>
+                                    </div>
+                                    <div class="flex-item">
+                                        <p><?php echo $_POST['experience']; ?></p>
+                                    </div>
+                                </div>
+                                <?php if( !empty($_POST['experience']) && ($_POST['experience'] === "「1年以上」の経験があり、現在もやっている" || $_POST['experience'] === "「1年未満」の経験があり、現在もやっている" || $_POST['experience'] === "過去少しやったことがあるが、現在はやっていない") ): ?>
+                                    <div class="flex">
+                                        <div class="flex-item">
+                                            <p class="text-bold">動画編集案件</p>
+                                        </div>
+                                        <div class="flex-item">
+                                            <p><?php echo $_POST['project']; ?></p>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
+                                <div class="flex">
+                                    <div class="flex-item">
+                                        <p class="text-bold">動画スクール受講経験</p>
+                                    </div>
+                                    <div class="flex-item">
+                                        <p><?php echo $_POST['joined']; ?></p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex-item">
+                                        <p class="text-bold">学んだ後の目標</p>
+                                    </div>
+                                    <div class="flex-item">
+                                        <p><?php echo $_POST['goals']; ?></p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex-item">
                                         <p class="text-bold">ご相談内容</p>
                                     </div>
                                     <div class="flex-item">
@@ -165,6 +218,12 @@ if( !empty($_POST['btn_confirm']) ) {
                                     <input type="hidden" name="datetime_local01" value="<?php echo $_POST['datetime_local01']; ?>">
                                     <input type="hidden" name="datetime_local02" value="<?php echo $_POST['datetime_local02']; ?>">
                                     <input type="hidden" name="stage" value="<?php echo $_POST['stage']; ?>">
+                                    <input type="hidden" name="experience" value="<?php echo $_POST['experience']; ?>">
+                                    <?php if( !empty($_POST['experience']) && $_POST['experience'] !== "全くの未経験" ): ?>
+                                        <input type="hidden" name="project" value="<?php echo $_POST['project']; ?>">
+                                    <?php endif; ?>
+                                    <input type="hidden" name="joined" value="<?php echo $_POST['joined']; ?>">
+                                    <input type="hidden" name="goals" value="<?php echo $_POST['goals']; ?>">
                                     <input type="hidden" name="message" value="<?php echo $_POST['message']; ?>">
                                     <input type="hidden" name="application_number" value="<?php echo $_POST['application_number']?>">
                             </div>
@@ -285,6 +344,76 @@ if( !empty($_POST['btn_confirm']) ) {
                             <?php endif;?>
                         </div>
 
+                        <div class="flex-item">
+                            <label for="">動画編集経験</label>
+                            <select id="experience" class="select experience" name="experience" onchange="toggleProjectQuestion()">
+                                <option value="選択" <?php if( !empty($_POST['experience']) ){ echo ''; } ?> disabled selected>選択</option>
+                                <option value="「1年以上」の経験があり、現在もやっている" <?php if( !empty($_POST['experience']) && $_POST['experience'] === "「1年以上」の経験があり、現在もやっている" ){ echo 'selected'; } ?>>「1年以上」の経験があり、現在もやっている</option>
+                                <option value="「1年未満」の経験があり、現在もやっている" <?php if( !empty($_POST['experience']) && $_POST['experience'] === "「1年未満」の経験があり、現在もやっている" ){ echo 'selected'; } ?>>「1年未満」の経験があり、現在もやっている</option>
+                                <option value="過去少しやったことがあるが、現在はやっていない" <?php if( !empty($_POST['experience']) && $_POST['experience'] === "過去少しやったことがあるが、現在はやっていない" ){ echo 'selected'; } ?>>過去少しやったことがあるが、現在はやっていない</option>
+                                <option value="全くの未経験" <?php if( !empty($_POST['experience']) && $_POST['experience'] === "全くの未経験" ){ echo 'selected'; } ?>>全くの未経験</option>
+                            </select>
+                            <?php if(!empty($error_message[7])):?>
+                                <style>
+                                    .form-area.experience {
+                                        border: solid 1px #F5CF00;
+                                    }
+                                </style>
+                                <p class="error_msg"><?php echo $error_message[7];?></p>
+                            <?php endif;?>
+                        </div>
+
+                        <div id="project-question" class="flex-item" style="<?php echo !empty($error_message[8]) ? '' : 'display:none;'; ?>">
+                            <label for="">過去に動画編集案件を受注したことはありますか？</label>
+                            <select class="select project" name="project">
+                                <option value="選択" <?php if( !empty($_POST['project']) ){ echo ''; } ?> disabled selected>選択</option>
+                                <option value="10本以上ある" <?php if( !empty($_POST['project']) && $_POST['project'] === "10本以上ある" ){ echo 'selected'; } ?>>10本以上ある</option>
+                                <option value="10本未満だがある" <?php if( !empty($_POST['project']) && $_POST['project'] === "10本未満だがある" ){ echo 'selected'; } ?>>10本未満だがある</option>
+                                <option value="ない" <?php if( !empty($_POST['project']) && $_POST['project'] === "ない" ){ echo 'selected'; } ?>>ない</option>
+                            </select>
+                            <?php if(!empty($error_message[8])):?>
+                                <style>
+                                    .form-area.project {
+                                        border: solid 1px #F5CF00;
+                                    }
+                                </style>
+                                <p class="error_msg"><?php echo $error_message[8];?></p>
+                            <?php endif;?>
+                        </div>
+
+                        <div class="flex-item">
+                            <label for="">動画スクールに入ったことがあるか</label>
+                            <select class="select joined" name="joined">
+                                <option vallue="選択" <?php if( !empty($_POST['joined']) ){ echo ''; } ?> disabled selected>選択</option>
+                                <option value="あり、今も入っている" <?php if( !empty($_POST['joined']) && $_POST['joined'] === "あり、今も入っている" ){ echo 'selected'; } ?>>あり、今も入っている</option>
+                                <option value="あるが、今は入っていない" <?php if( !empty($_POST['joined']) && $_POST['joined'] === "あるが、今は入っていない" ){ echo 'selected'; } ?>>あるが、今は入っていない</option>
+                                <option value="ない" <?php if( !empty($_POST['joined']) && $_POST['joined'] === "ない" ){ echo 'selected'; } ?>>ない</option>
+                            </select>
+                            <?php if(!empty($error_message[9])):?>
+                                <style>
+                                    .form-area.joined {
+                                        border: solid 1px #F5CF00;
+                                    }
+                                </style>
+                                <p class="error_msg"><?php echo $error_message[9];?></p>
+                            <?php endif;?>
+                        </div>
+
+                        <div class="flex-item">
+                            <label for="">学んだ後の目標</label>
+                            <p>
+                                <input class="form-area goals" name="goals" value="<?php if( !empty($_POST['goals']) ){ echo $_POST['goals']; } ?>" placeholder="※月収や独立などをおしえてください" type="text">
+                            </p>
+                            <?php if(!empty($error_message[10])):?>
+                                <style>
+                                    .form-area.goals {
+                                        border: solid 1px #F5CF00;
+                                    }
+                                </style>
+                                <p class="error_msg"><?php echo $error_message[10];?></p>
+                            <?php endif;?>
+                        </div>
+
                         <div class="contact-detail">
                             <label for="">ご相談内容</label>
                             <p>
@@ -325,4 +454,16 @@ if( !empty($_POST['btn_confirm']) ) {
 </script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/select2.min.js"></script>
+<script>
+    function toggleProjectQuestion() {
+        var experience = document.getElementById("experience").value;
+        var projectQuestion = document.getElementById("project-question");
+
+        if (experience === "「1年以上」の経験があり、現在もやっている" || experience === "「1年未満」の経験があり、現在もやっている" || experience === "過去少しやったことがあるが、現在はやっていない") {
+            projectQuestion.style.display = "block";
+        } else {
+            projectQuestion.style.display = "none";
+        }
+    }
+</script>
 <?php get_footer(); ?>
