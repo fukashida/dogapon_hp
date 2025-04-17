@@ -24,7 +24,7 @@ $admin_reply_text = null;
 date_default_timezone_set('Asia/Tokyo');
 
 // 宛先 ※同時に指定
-$to = "info@academydpm.com,m-obata@liartpromotion.com,info@typesinc.com,kawana@dogapon.com";
+$to = "info@academydpm.com,m-obata@liartpromotion.com,info@typesinc.com,kawana@dogapon.com,lifework.mo.pk@gmail.com";
 
 // ヘッダー情報を設定
 $header = "MIME-Version: 1.0\n";
