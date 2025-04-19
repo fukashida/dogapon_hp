@@ -44,6 +44,10 @@ $admin_reply_text .= "メールアドレス：" . $_POST['email'] . "\n";
 $admin_reply_text .= "第一希望日程 時間：" . $_POST['datetime_local01'] . "\n";
 $admin_reply_text .= "第二希望日程 時間：" . $_POST['datetime_local02'] . "\n";
 $admin_reply_text .= "ご検討段階について：" . $_POST['stage'] . "\n";
+$admin_reply_text .= "動画編集経験：" . $_POST['experience'] . "\n";
+$admin_reply_text .= "動画編集案件：" . $_POST['project'] . "\n";
+$admin_reply_text .= "動画スクール受講経験：" . $_POST['joined'] . "\n";
+$admin_reply_text .= "学んだ後の目標：" . $_POST['goals'] . "\n";
 $admin_reply_text .= "\n";
 $admin_reply_text .= "ご相談内容：" . $_POST['message'] . "\n\n";
 $admin_reply_text .= "--\n\n";
@@ -62,7 +66,7 @@ if( !empty($_SESSION['page']) && $_SESSION['page'] === true ) {
 
 
 if(count($_POST)){
-    $url = 'https://script.google.com/macros/s/AKfycbxk9i_kGXoJkaNv8VVtbv6Nz9K62YGFC50XbLUagt_beYessf9jJOETLlhtPP-gPfep/exec';
+    $url = 'https://script.google.com/macros/s/AKfycbz1kfPtPwtneEVDtktQcbvqZywW6Q5rZLPf1lJX5gdpJXtxDjsvJrTGxmnatL5mQqQf/exec';
     $data = array(
         'application_number' => $_POST['application_number'],
         'your_name' => $_POST['your_name'],
@@ -70,6 +74,10 @@ if(count($_POST)){
         'datetime_local01' => $_POST['datetime_local01'],
         'datetime_local02' => $_POST['datetime_local02'],
         'stage' => $_POST['stage'],
+        'experience' => $_POST['experience'],
+        'project' => $_POST['project'],
+        'joined' => $_POST['joined'],
+        'goals' => $_POST['goals'],
         'message' => $_POST['message'],
     );
     $context = array(
