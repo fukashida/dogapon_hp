@@ -24,7 +24,8 @@ $admin_reply_text = null;
 date_default_timezone_set('Asia/Tokyo');
 
 // 宛先 ※同時に指定
-$to = "info@academydpm.com,m-obata@liartpromotion.com,info@typesinc.com,kawana@dogapon.com,lifework.mo.pk@gmail.com";
+// $to = "info@academydpm.com,m-obata@liartpromotion.com,info@typesinc.com,kawana@dogapon.com,lifework.mo.pk@gmail.com";
+$to = "f-shida@spirits-gr.com";
 
 // ヘッダー情報を設定
 $header = "MIME-Version: 1.0\n";
@@ -44,6 +45,9 @@ $admin_reply_text .= "メールアドレス：" . $_POST['email'] . "\n";
 $admin_reply_text .= "第一希望日程 時間：" . $_POST['datetime_local01'] . "\n";
 $admin_reply_text .= "第二希望日程 時間：" . $_POST['datetime_local02'] . "\n";
 $admin_reply_text .= "ご検討段階について：" . $_POST['stage'] . "\n";
+$admin_reply_text .= "動画編集経験：" . $_POST['experience'] . "\n";
+$admin_reply_text .= "動画スクールに入ったことがあるか：" . $_POST['project'] . "\n";
+$admin_reply_text .= "学んだ後の目標：" . $_POST['project'] . "\n";
 $admin_reply_text .= "\n";
 $admin_reply_text .= "ご相談内容：" . $_POST['message'] . "\n\n";
 $admin_reply_text .= "--\n\n";
@@ -54,15 +58,12 @@ $admin_reply_text .= "このメールは ドガポン (https://dogapon.com/) の
 // 運営側へメール送信
 mb_send_mail( $to , $admin_reply_subject, $admin_reply_text, $header);
 
-// セッションの削除
-unset($_SESSION['page']);
-
 session_start();
 if( !empty($_SESSION['page']) && $_SESSION['page'] === true ) {
 
 
 if(count($_POST)){
-    $url = 'https://script.google.com/macros/s/AKfycbxk9i_kGXoJkaNv8VVtbv6Nz9K62YGFC50XbLUagt_beYessf9jJOETLlhtPP-gPfep/exec';
+    $url = 'https://script.google.com/macros/s/AKfycbwOu03QGGPqf_AxCM0E497FsS28N0ZS3FImIOjBdVzGcI5nBZyJvnxHIV7kUZf401sj/exec';
     $data = array(
         'application_number' => $_POST['application_number'],
         'your_name' => $_POST['your_name'],
@@ -70,6 +71,10 @@ if(count($_POST)){
         'datetime_local01' => $_POST['datetime_local01'],
         'datetime_local02' => $_POST['datetime_local02'],
         'stage' => $_POST['stage'],
+        'experience' => $_POST['experience'],
+        'project' => $_POST['project'],
+        'joined' => $_POST['joined'],
+        'goals' => $_POST['goals'],
         'message' => $_POST['message'],
     );
     $context = array(
@@ -83,6 +88,13 @@ if(count($_POST)){
     $response_data = json_decode($response_json);
     var_dump($response_data);
 }
+
+// セッションの削除
+unset($_SESSION['page']);
+
+// ✅ サンクスページにリダイレクト
+header("Location: /thanks/");
+
 
 
 } else {
