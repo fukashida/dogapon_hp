@@ -24,8 +24,8 @@ $admin_reply_text = null;
 date_default_timezone_set('Asia/Tokyo');
 
 // 宛先 ※同時に指定
-// $to = "info@academydpm.com,m-obata@liartpromotion.com,info@typesinc.com,kawana@dogapon.com,lifework.mo.pk@gmail.com";
-$to = "f-shida@spirits-gr.com";
+$to = "info@academydpm.com,m-obata@liartpromotion.com,info@typesinc.com,kawana@dogapon.com,lifework.mo.pk@gmail.com,zerodirector@liartpromotion.com";
+// $to = "f-shida@spirits-gr.com";
 
 // ヘッダー情報を設定
 $header = "MIME-Version: 1.0\n";
@@ -47,7 +47,7 @@ $admin_reply_text .= "第二希望日程 時間：" . $_POST['datetime_local02']
 $admin_reply_text .= "ご検討段階について：" . $_POST['stage'] . "\n";
 $admin_reply_text .= "動画編集経験：" . $_POST['experience'] . "\n";
 $admin_reply_text .= "動画スクールに入ったことがあるか：" . $_POST['project'] . "\n";
-$admin_reply_text .= "学んだ後の目標：" . $_POST['project'] . "\n";
+$admin_reply_text .= "学んだ後の目標：" . $_POST['goals'] . "\n";
 $admin_reply_text .= "\n";
 $admin_reply_text .= "ご相談内容：" . $_POST['message'] . "\n\n";
 $admin_reply_text .= "--\n\n";
@@ -63,7 +63,7 @@ if( !empty($_SESSION['page']) && $_SESSION['page'] === true ) {
 
 
 if(count($_POST)){
-    $url = 'https://script.google.com/macros/s/AKfycbwOu03QGGPqf_AxCM0E497FsS28N0ZS3FImIOjBdVzGcI5nBZyJvnxHIV7kUZf401sj/exec';
+    $url = 'https://script.google.com/macros/s/AKfycbz8xwBfMJFRBhxkrHSKI--ZcyqoGFF9QAkdutl0f7aRzZ-MpE5oJXayIhzvUBPGVcj1/exec';
     $data = array(
         'application_number' => $_POST['application_number'],
         'your_name' => $_POST['your_name'],
